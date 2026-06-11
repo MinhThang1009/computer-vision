@@ -9,6 +9,9 @@
 *.bbl.bak
 *.blg
 
+# Repo tham khảo clone về local — không push code của người khác lên repo này
+4DGaussians/
+
 # Cache tool
 .ruff_cache/
 __pycache__/
