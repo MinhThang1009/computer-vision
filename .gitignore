@@ -1,0 +1,18 @@
+# File phụ sinh ra khi biên dịch LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl.bak
+*.blg
+
+# Cache tool
+.ruff_cache/
+__pycache__/
+
+# Hệ điều hành
+Thumbs.db
+.DS_Store

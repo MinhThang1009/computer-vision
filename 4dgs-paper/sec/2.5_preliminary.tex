@@ -1,0 +1,58 @@
+\section{Preliminary}
+In this section, we simply review the representation and rendering process of 3D-GS~\cite{3dgs} in Sec.~\ref{subsec:3D Gaussian Splatting} and the formula of dynamic NeRFs in Sec.~\ref{subsec:Dynamic NeRFs with deformation Fields.}.
+
+\subsection{3D Gaussian Splatting}
+\label{subsec:3D Gaussian Splatting}
+3D Gaussians~\cite{3dgs} is an explicit 3D scene representation in the form of point clouds. Each 3D Gaussian is characterized by a covariance matrix $\Sigma$ and a center point $\mathcal{X}$, which is referred to as the mean value of the Gaussian:
+\begin{equation}
+\label{formula:gaussian's formula}
+    G(X)=e^{-\frac{1}{2}\mathcal{X}^T\Sigma^{-1}\mathcal{X}}.
+\end{equation}
+For differentiable optimization, the covariance matrix $\Sigma$ can be decomposed into a scaling matrix $\mathbf{S}$ and a rotation matrix $\mathbf{R}$:
+\begin{equation}
+\label{formula:covariance decomposition}
+    \Sigma = \mathbf{R}\mathbf{S}\mathbf{S}^T\mathbf{R}^T.
+\end{equation}
+% the computation of gradient flow during training is depicted in~\cite{3dgs}.
+
+When rendering novel views, differential splatting~\cite{yifan2019differentiablesplatting} is employed for the 3D Gaussians within the camera planes. As introduced by~\cite{zwicker2001surfacesplatting}, using a viewing transform matrix $W$ and the Jacobian matrix $J$ of the affine approximation of the projective transformation, the covariance matrix $\Sigma^{\prime}$ in camera coordinates can be computed as
+\begin{equation}
+    \Sigma^{\prime} = JW\Sigma W^TJ^T.
+\end{equation}
+In summary, each 3D Gaussian is characterized by the following attributes: position $\mathcal{X} \in \mathbb{R}^3$, color defined by spherical harmonic (SH) coefficients $\mathcal{C} \in \mathbb{R}^k$ (where $k$ represents nums of SH functions), opacity $\alpha \in \mathbb{R}$, rotation factor $r \in \mathbb{R}^4$, and scaling factor $s \in \mathbb{R}^3$.
+Specifically, for each pixel, the color and opacity of all the Gaussians are computed using the Gaussian's representation Eq.~\ref{formula:gaussian's formula}. The blending of $N$ ordered points that overlap the pixel is given by the formula:
+\begin{equation}
+\label{formula: splatting&volume rendering}
+    C = \sum_{i\in N}c_i \alpha_i \prod_{j=1}^{i-1} (1-\alpha_i).
+\end{equation}
+Here, $c_i$, $\alpha_i$ represents the density and color of this point computed by a 3D Gaussian $G$ with covariance $\Sigma$ multiplied by an optimizable per-point opacity and SH color coefficients.
+
+\subsection{Dynamic NeRFs with Deformation Fields}
+\label{subsec:Dynamic NeRFs with deformation Fields.}
+All the dynamic NeRF algorithms can be formulated as:
+\begin{equation}
+    c,\sigma = \mathcal{M}(\mathbf{x},t),
+\end{equation}
+where $\mathcal{M}$ is a mapping that maps 6D space $(\mathbf{x},d,t)$ to 4D space $(c,\sigma)$. Dynamic NeRFs mainly follow two paths: canonical-mapping volume rendering~\cite{pumarola2021dnerf,park2021nerfies,park2021hypernerf,tineuvox,robustdynamicradiancefields} and time-aware volume rendering~\cite{Dynamicviewsynthesisfromdynamicmonocularvideo,li2022neural,hexplane,kplanes,tensor4d}. In this section, we mainly give a brief review of the former.
+
+ As is shown in Fig.~\ref{fig: splatting-volume}~\textcolor{red}{(a)}, the canonical-mapping volume rendering transforms each sampled point into a canonical space by a deformation network $\phi_t:(\mathbf{x},t)\rightarrow \Delta \mathbf{x}$. Then a canonical network $\phi_x$ is introduced to regress volume density and view-dependent RGB color from each ray. The formula for rendering can be expressed as:
+\begin{equation}
+    c, \sigma = \text{NeRF}(\mathbf{x}+\Delta \mathbf{x}),
+\end{equation}
+where `NeRF' stands for vanilla NeRF pipeline.
+% \paragraph{Time-aware Volume Rendering.} Fig.~\ref{fig: splatting-volume}~\textcolor{red}{(b)} illustrates the details of time-aware volume rendering. Though the rendering rays remain the same in 3D space, the temporal information is different, which means the sampled points are individual in the 4D space. Canonical network $\phi_x$ is introduced to combine the relationship between temporal and spatial features. 
+
+However, our 4D Gaussian splatting framework presents a novel rendering technique. We transform 3D Gaussians using a Gaussian deformation field network $\mathcal{F}$ at the time $t$ directly and differential splatting~\cite{3dgs} is followed. 
+% In most cases~\cite{pumarola2021dnerf,tineuvox,park2021hypernerf,dynamicnerf,park2021hypernerf}, positional encoding~\cite{vaswani2017attention} is used to expand information. 
+
+
+% Approaches such as~\cite{kplanes,hexplane,tensor4d} provide effective dynamic scene representations that learn information from multi-view temporal image inputs and generate high-quality novel views. All of these approaches aim to regress color $c$ and density $\sigma$ given spatial point $x$ and time $t$ using a function $\mathbf{F}$:
+% \begin{equation}
+%     c, \sigma = \mathbf{F}(\mathcal{X},t).
+% \end{equation}
+% In most cases, $\mathbf{F}$ consists of a neural voxel module $\mathcal{F}$ and an MLP decoder $g$. During the forward pass, the point $x$ and time $t$ are fed into the voxel-plane module $\mathcal{F}$ to obtain voxel features $f_{voxel}$, and then the color $c$ and density $\sigma$ can be computed using the decoder $g$. Therefore, the forward process can be expressed as:
+
+% \begin{align}
+%       &  f_{voxel} = \mathcal{F}(X,t), \\
+%   &  c, \sigma = g(f).
+% \end{align}

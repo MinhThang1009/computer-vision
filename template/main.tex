@@ -1,0 +1,308 @@
+% ============================================================
+% TEMPLATE BÁO CÁO MÔN HỌC — format kế thừa từ main-exact-replica.tex
+% (tái tạo từ bản báo cáo gốc: font 13pt, giãn dòng 1.3, heading
+% "Chương N" cỡ \huge + tên chương \LARGE, link khung đỏ, code nền xám)
+%
+% Cách dùng: copy file này, điền vào các chỗ <...>, xóa nội dung mẫu.
+% Biên dịch: pdflatex template.tex (chạy 2 lần để có mục lục)
+% ============================================================
+\documentclass[a4paper]{report}
+
+% ---- Font 13pt + giãn dòng 1.3 (chuẩn báo cáo VN) ----
+\usepackage[fontsize=13pt]{scrextend}
+\linespread{1.3}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+% Lề chuẩn báo cáo VN: trái 3cm (gáy), phải 2cm, trên/dưới 2.5-3cm
+\usepackage[a4paper,top=2.5cm,bottom=3cm,left=3cm,right=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[font=small]{caption}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage[titles]{tocloft} % mục lục dạng "Chương N ..."
+\usepackage{hyperref}        % link kiểu khung đỏ cổ điển (mặc định hyperref)
+
+% Không cho dòng đầu của một đoạn nằm cuối trang
+\clubpenalty=10000
+
+% Đoạn văn: không thụt đầu dòng, cách đoạn 5.1pt
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5.1pt}
+
+% Khoảng cách itemize (theo format bản gốc)
+\setlist[itemize]{topsep=10.35pt plus 3pt minus 6.5pt,
+    partopsep=1.9pt plus 1pt minus 1pt,
+    itemsep=9.93pt plus 2.2pt minus 1.4pt, parsep=0pt}
+
+% Mục lục: "Chương 1 <tên>"; section thụt vào
+\renewcommand{\cftchappresnum}{\chaptername\ }
+\setlength{\cftchapnumwidth}{69.46pt}
+\setlength{\cftsecindent}{15.06pt}
+\setlength{\cftsecnumwidth}{22.98pt}
+\setlength{\cftbeforechapskip}{10.04pt}
+
+% ---- Heading theo format bản gốc ----
+\makeatletter
+% Section: cỡ 14.95pt (lớn hơn body một bậc), before-skip đã trừ parskip
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-17.62pt \@plus -5.89pt \@minus -1.18pt}%
+    {2.3ex \@plus .2ex}%
+    {\normalfont\fontsize{14.95pt}{16.31pt}\selectfont\bfseries}}
+% Chapter có số: "Chương N" \huge, tên chương \LARGE
+\def\@makechapterhead#1{%
+  \vspace*{-9.9\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \huge\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 3.1\p@
+    \fi
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    \vskip 2.8\p@
+  }}
+% Chapter không số: \Huge cho "Mục lục" (sau TOC sẽ chuyển sang \LARGE)
+\def\@makeschapterhead#1{%
+  \vspace*{22.9\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 39.9\p@
+  }}
+\makeatother
+
+\graphicspath{{images/}}
+
+% ---- Kiểu code (nền xám, số dòng bên trái) ----
+\definecolor{codebg}{rgb}{0.949,0.949,0.9216}
+\definecolor{codekw}{rgb}{0.0,0.35,0.75}
+\definecolor{codestr}{rgb}{0.8,0.1,0.1}
+\definecolor{codecmt}{rgb}{0.45,0.45,0.45}
+\lstset{
+    language=Python, % <-- đổi theo ngôn ngữ của bài mới
+    backgroundcolor=\color{codebg},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{codekw}\bfseries,
+    stringstyle=\color{codestr},
+    commentstyle=\color{codecmt},
+    numbers=left,
+    numberstyle=\small\color{codecmt}, % số dòng cùng cỡ chữ code (như bản gốc)
+    numbersep=8pt,
+    breaklines=true,
+    showstringspaces=false,
+    columns=fullflexible,
+    keepspaces=true,
+    aboveskip=5.7pt plus 2pt,
+    belowskip=32.6pt plus 2pt minus 2.5pt,
+    inputencoding=utf8,
+    extendedchars=true,
+}
+
+\begin{document}
+
+% ============================================================
+% TRANG BÌA — điền vào các chỗ <...>
+% ============================================================
+\begin{titlepage}
+\begin{center}
+% Khung đôi: nét ngoài đậm 3pt, khe 4pt, nét trong 1pt (như bản gốc)
+\setlength{\fboxrule}{3pt}%
+\setlength{\fboxsep}{4.25pt}%
+\fbox{{\setlength{\fboxrule}{1pt}\setlength{\fboxsep}{0pt}%
+\fbox{%
+\begin{minipage}[c][\dimexpr\textheight-16.5pt\relax][c]{\dimexpr\textwidth-16.5pt\relax}
+\begin{center}
+\vspace*{1.2cm}
+{\bfseries ĐẠI HỌC QUỐC GIA HÀ NỘI}\\[0.5em]
+{\bfseries TRƯỜNG ĐẠI HỌC CÔNG NGHỆ}
+
+\vspace{1.2cm}
+\includegraphics[width=3.2cm]{logo_uet}
+
+\vfill
+{\bfseries BÁO CÁO MÔN HỌC}\\[0.5em]
+{\bfseries <TÊN MÔN HỌC>}
+
+\vfill
+{\bfseries <TÊN ĐỀ TÀI BÁO CÁO>}\\[0.5em]
+{\bfseries (<TÊN PHỤ NẾU CÓ>)}
+
+\vfill
+\begin{tabular}{@{}ll@{}}
+Giảng viên:   & <Học hàm, học vị, tên giảng viên> \\
+Môn học:      & <Tên môn học> \\
+Lớp học phần: & <Mã lớp học phần> \\
+Sinh viên:    & <Họ tên 1> - <MSSV 1> \\
+              & <Họ tên 2> - <MSSV 2> \\
+\end{tabular}
+
+\vfill
+{\bfseries HÀ NỘI - <NĂM>}
+\vspace*{1.2cm}
+\end{center}
+\end{minipage}}}}
+\end{center}
+\end{titlepage}
+
+% ============================================================
+% MỤC LỤC — không đánh số trang; Chương 1 bắt đầu từ trang 1
+% ============================================================
+\pagestyle{empty}
+\begingroup
+\setlength{\parskip}{0pt}
+\tableofcontents
+\addcontentsline{toc}{chapter}{Mục lục}
+\endgroup
+\thispagestyle{empty}
+\clearpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+% Từ đây các chapter không số (Đóng góp, Tài liệu tham khảo, ...) dùng \LARGE
+\makeatletter
+\def\@makeschapterhead#1{%
+  \vspace*{-9.9\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries  #1\par\nobreak
+    \vskip 2.7\p@
+  }}
+\makeatother
+
+% ============================================================
+% CHƯƠNG 1 — nội dung mẫu, thay bằng nội dung thật
+% ============================================================
+\chapter{Giới thiệu}
+
+\section{Giới thiệu bài toán}
+
+Đoạn văn mở đầu. Trích dẫn tài liệu bằng \cite{vidu2024}. Tham chiếu hình
+bằng Hình \ref{fig:vidu}, tham chiếu công thức bằng công thức \ref{eq:vidu}.
+
+Một danh sách ví dụ:
+
+\begin{itemize}
+    \item Ý thứ nhất.
+    \item Ý thứ hai.
+    \item Ý thứ ba.
+\end{itemize}
+
+Một công thức được đánh số:
+\begin{equation}
+    y = \frac{\sum_i y_i w_i}{\sum_j w_j}
+    \label{eq:vidu}
+\end{equation}
+
+% Hình mẫu — bỏ comment khi đã có ảnh trong thư mục images/
+%\begin{figure}[htbp]
+%    \centering
+%    \includegraphics[width=\textwidth]{ten_anh}
+%    \caption{Chú thích hình.}
+%    \label{fig:vidu}
+%\end{figure}
+
+\section{Tổng quan tài liệu}
+
+Nội dung\dots
+
+\section{Cơ sở lý thuyết}
+
+Nội dung\dots
+
+% ============================================================
+% CHƯƠNG 2
+% ============================================================
+\chapter{Phương pháp đề xuất}
+
+Giới thiệu ngắn về phương pháp, quy trình gồm bao nhiêu bước\dots
+
+\section{Bước 1: <Tên bước>}
+
+Mô tả bước 1\dots Một đoạn code mẫu:
+
+\begin{lstlisting}
+    # code o day
+    print("Hello")
+\end{lstlisting}
+
+Giải thích sau code\dots
+
+\section{Bước 2: <Tên bước>}
+
+Nội dung\dots
+% Thêm các \section{Bước N: ...} tùy số bước của phương pháp
+
+% ============================================================
+% CHƯƠNG 3
+% ============================================================
+\chapter{Kết quả thực nghiệm}
+
+Giới thiệu môi trường cài đặt (ngôn ngữ, thư viện)\dots
+
+\section{Dữ liệu thử nghiệm}
+
+Mô tả dữ liệu\dots
+
+\section{Kết quả}
+
+Trình bày kết quả, kèm hình minh họa\dots
+
+\section{Phân tích kết quả so với các phương pháp khác}
+
+So sánh, nhận xét\dots
+
+% ============================================================
+% CHƯƠNG 4
+% ============================================================
+\chapter{Kết luận}
+
+Tóm tắt đóng góp, hạn chế, hướng phát triển\dots
+
+% ============================================================
+% ĐÓNG GÓP THÀNH VIÊN
+% ============================================================
+\chapter*{Đóng góp các thành viên trong nhóm}
+\addcontentsline{toc}{chapter}{Đóng góp thành viên}
+
+\begin{tabular}{|p{49.4mm}|p{80.1mm}|p{25.1mm}|}
+\hline
+\textbf{Sinh viên} & \textbf{Tác vụ thực hiện} & \textbf{Đóng góp (\%)} \\
+\hline
+\multirow{2}{*}{<Họ tên 1>}
+    & <Tác vụ>           & \multirow{2}{*}{50\%} \\
+    & <Tác vụ>           & \\
+\hline
+\multirow{2}{*}{<Họ tên 2>}
+    & <Tác vụ>           & \multirow{2}{*}{50\%} \\
+    & <Tác vụ>           & \\
+\hline
+\end{tabular}
+
+% ============================================================
+% LINK SOURCE CODE
+% ============================================================
+\chapter*{Link Source code của nhóm}
+\addcontentsline{toc}{chapter}{Link Source code}
+
+Mô tả ngắn về source code\dots
+
+\textbf{Link Source code:} \href{https://example.com}{Source code}
+
+% ============================================================
+% TÀI LIỆU THAM KHẢO
+% ============================================================
+\begin{thebibliography}{9}
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
+
+\bibitem{vidu2024}
+Tên tác giả. Tên bài báo. \textit{Tên tạp chí/hội nghị}, số(kỳ):trang--trang, năm.
+
+\end{thebibliography}
+
+\end{document}
