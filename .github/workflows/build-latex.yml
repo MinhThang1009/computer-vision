@@ -9,11 +9,9 @@ on:
       - "template/**"
       - "example/**"
       - ".github/workflows/build-latex.yml"
+  # PR không lọc paths: ruleset yêu cầu 2 check build pass mới được merge,
+  # nếu lọc thì PR không đụng template/example sẽ kẹt chờ check không bao giờ chạy
   pull_request:
-    paths:
-      - "template/**"
-      - "example/**"
-      - ".github/workflows/build-latex.yml"
 
 jobs:
   build:
