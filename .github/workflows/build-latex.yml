@@ -1,0 +1,34 @@
+# CI biên dịch LaTeX — fail nếu file .tex không build được sau khi sửa.
+# Chỉ chạy khi template/ hoặc example/ thay đổi để tiết kiệm thời gian Actions.
+name: Build LaTeX
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "template/**"
+      - "example/**"
+      - ".github/workflows/build-latex.yml"
+  pull_request:
+    paths:
+      - "template/**"
+      - "example/**"
+      - ".github/workflows/build-latex.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # template lỗi vẫn build tiếp example và ngược lại
+      matrix:
+        dir: [template, example]
+    name: Biên dịch ${{ matrix.dir }}/main.tex
+    steps:
+      - uses: actions/checkout@v6
+
+      # latex-action dùng TeX Live đầy đủ (có sẵn babel-vietnamese, fontenc T5);
+      # latexmk tự chạy pdflatex nhiều lần để mục lục/tham chiếu cập nhật
+      - uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          working_directory: ${{ matrix.dir }}
