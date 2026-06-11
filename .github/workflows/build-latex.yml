@@ -24,11 +24,12 @@ jobs:
         dir: [template, example]
     name: Biên dịch ${{ matrix.dir }}/main.tex
     steps:
-      - uses: actions/checkout@v6
+      # Pin theo commit SHA để tag không thể bị move sang code khác
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
       # latex-action dùng TeX Live đầy đủ (có sẵn babel-vietnamese, fontenc T5);
       # latexmk tự chạy pdflatex nhiều lần để mục lục/tham chiếu cập nhật
-      - uses: xu-cheng/latex-action@v4
+      - uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b # v4.1.0
         with:
           root_file: main.tex
           working_directory: ${{ matrix.dir }}
