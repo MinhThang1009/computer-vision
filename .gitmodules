@@ -1,3 +1,3 @@
-[submodule "4DGaussians"]
-	path = 4DGaussians
+[submodule "4dgs-paper/4DGaussians"]
+	path = 4dgs-paper/4DGaussians
 	url = https://github.com/hustvl/4DGaussians.git
