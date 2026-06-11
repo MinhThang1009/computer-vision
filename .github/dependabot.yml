@@ -1,0 +1,12 @@
+# Dependabot tự mở PR bump version các GitHub Actions trong workflows.
+# Hiểu cả action pin theo SHA — tự cập nhật SHA lẫn comment version đi kèm.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencies"
