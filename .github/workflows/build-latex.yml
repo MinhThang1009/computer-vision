@@ -1,26 +1,21 @@
 # CI biên dịch LaTeX — fail nếu file .tex không build được sau khi sửa.
-# Chỉ chạy khi template/ hoặc example/ thay đổi để tiết kiệm thời gian Actions.
+# Chỉ chạy khi report/ thay đổi để tiết kiệm thời gian Actions.
 name: Build LaTeX
 
 on:
   push:
     branches: [main]
     paths:
-      - "template/**"
-      - "example/**"
+      - "report/**"
       - ".github/workflows/build-latex.yml"
-  # PR không lọc paths: ruleset yêu cầu 2 check build pass mới được merge,
-  # nếu lọc thì PR không đụng template/example sẽ kẹt chờ check không bao giờ chạy
+  # PR không lọc paths: ruleset yêu cầu check build pass mới được merge,
+  # nếu lọc thì PR không đụng report sẽ kẹt chờ check không bao giờ chạy
   pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false # template lỗi vẫn build tiếp example và ngược lại
-      matrix:
-        dir: [template, example]
-    name: Biên dịch ${{ matrix.dir }}/main.tex
+    name: Biên dịch report/main.tex
     steps:
       # Pin theo commit SHA để tag không thể bị move sang code khác
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
@@ -30,4 +25,4 @@ jobs:
       - uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b # v4.1.0
         with:
           root_file: main.tex
-          working_directory: ${{ matrix.dir }}
+          working_directory: report
