@@ -1,0 +1,273 @@
+\begin{thebibliography}{58}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Attal et~al.(2021)Attal, Laidlaw, Gokaslan, Kim, Richardt, Tompkin, and O'Toole]{attal2021torf}
+Benjamin Attal, Eliot Laidlaw, Aaron Gokaslan, Changil Kim, Christian Richardt, James Tompkin, and Matthew O'Toole.
+\newblock T\"orf: Time-of-flight radiance fields for dynamic scene view synthesis, 2021.
+
+\bibitem[Bi et~al.(2020)Bi, Xu, Srinivasan, Mildenhall, Sunkavalli, Hašan, Hold-Geoffroy, Kriegman, and Ramamoorthi]{bi2020neural}
+Sai Bi, Zexiang Xu, Pratul Srinivasan, Ben Mildenhall, Kalyan Sunkavalli, Miloš Hašan, Yannick Hold-Geoffroy, David Kriegman, and Ravi Ramamoorthi.
+\newblock Neural reflectance fields for appearance acquisition, 2020.
+
+\bibitem[Boss et~al.(2021)Boss, Jampani, Braun, Liu, Barron, and Lensch]{boss2021neuralpil}
+Mark Boss, Varun Jampani, Raphael Braun, Ce Liu, Jonathan~T. Barron, and Hendrik P.~A. Lensch.
+\newblock Neural-pil: Neural pre-integrated lighting for reflectance decomposition, 2021.
+
+\bibitem[Chen et~al.(2024)Chen, Chan, Shiu, Yen, Yeh, and Liu]{chen2024narcan}
+Ting-Hsuan Chen, Jie~Wen Chan, Hau-Shiang Shiu, Shih-Han Yen, Changhan Yeh, and Yu-Lun Liu.
+\newblock Narcan: Natural refined canonical image with integration of diffusion prior for video editing.
+\newblock In \emph{NeurIPS}, 2024.
+
+\bibitem[Cook and Torrance(1982)]{cook1982reflectance}
+Robert~L Cook and Kenneth~E. Torrance.
+\newblock A reflectance model for computer graphics.
+\newblock \emph{ACM Transactions on Graphics (ToG)}, 1\penalty0 (1):\penalty0 7--24, 1982.
+
+\bibitem[Eftekhar et~al.(2021)Eftekhar, Sax, Malik, and Zamir]{eftekhar2021omnidata}
+Ainaz Eftekhar, Alexander Sax, Jitendra Malik, and Amir Zamir.
+\newblock Omnidata: A scalable pipeline for making multi-task mid-level vision datasets from 3d scans.
+\newblock In \emph{Proceedings of the IEEE/CVF International Conference on Computer Vision}, pages 10786--10796, 2021.
+
+\bibitem[Gao et~al.(2023)Gao, Gu, Lin, Zhu, Cao, Zhang, and Yao]{gao2023relightable}
+Jian Gao, Chun Gu, Youtian Lin, Hao Zhu, Xun Cao, Li Zhang, and Yao Yao.
+\newblock Relightable 3d gaussian: Real-time point cloud relighting with brdf decomposition and ray tracing.
+\newblock \emph{arXiv preprint arXiv:2311.16043}, 2023.
+
+\bibitem[Ge et~al.(2023)Ge, Hu, Zhao, Liu, and Chen]{ge2023refneus}
+Wenhang Ge, Tao Hu, Haoyu Zhao, Shu Liu, and Ying-Cong Chen.
+\newblock Ref-neus: Ambiguity-reduced neural implicit surface learning for multi-view reconstruction with reflection, 2023.
+
+\bibitem[Guo et~al.(2023)Guo, Sun, Dai, Chen, Ye, Tan, Ding, Zhang, and Wang]{guo2023forward}
+Xiang Guo, Jiadai Sun, Yuchao Dai, Guanying Chen, Xiaoqing Ye, Xiao Tan, Errui Ding, Yumeng Zhang, and Jingdong Wang.
+\newblock Forward flow for novel view synthesis of dynamic scenes, 2023.
+
+\bibitem[Huang et~al.(2024{\natexlab{a}})Huang, Yu, Chen, Geiger, and Gao]{huang20242d}
+Binbin Huang, Zehao Yu, Anpei Chen, Andreas Geiger, and Shenghua Gao.
+\newblock 2d gaussian splatting for geometrically accurate radiance fields.
+\newblock In \emph{ACM SIGGRAPH 2024 Conference Papers}, pages 1--11, 2024{\natexlab{a}}.
+
+\bibitem[Huang et~al.(2024{\natexlab{b}})Huang, Sun, Yang, Lyu, Cao, and Qi]{huang2024scgs}
+Yi-Hua Huang, Yang-Tian Sun, Ziyi Yang, Xiaoyang Lyu, Yan-Pei Cao, and Xiaojuan Qi.
+\newblock Sc-gs: Sparse-controlled gaussian splatting for editable dynamic scenes, 2024{\natexlab{b}}.
+
+\bibitem[Jiang et~al.(2023)Jiang, Tu, Liu, Gao, Long, Wang, and Ma]{jiang2023gaussianshader}
+Yingwenqi Jiang, Jiadong Tu, Yuan Liu, Xifeng Gao, Xiaoxiao Long, Wenping Wang, and Yuexin Ma.
+\newblock Gaussianshader: 3d gaussian splatting with shading functions for reflective surfaces.
+\newblock \emph{arXiv preprint arXiv:2311.17977}, 2023.
+
+\bibitem[Jiang et~al.(2024)Jiang, Tu, Liu, Gao, Long, Wang, and Ma]{jiang2024gaussianshader}
+Yingwenqi Jiang, Jiadong Tu, Yuan Liu, Xifeng Gao, Xiaoxiao Long, Wenping Wang, and Yuexin Ma.
+\newblock Gaussianshader: 3d gaussian splatting with shading functions for reflective surfaces.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 5322--5332, 2024.
+
+\bibitem[Kajiya(1986)]{kajiya1986rendering}
+James~T Kajiya.
+\newblock The rendering equation.
+\newblock In \emph{Proceedings of the 13th annual conference on Computer graphics and interactive techniques}, pages 143--150, 1986.
+
+\bibitem[Karis and Games(2013)]{karis2013real}
+Brian Karis and Epic Games.
+\newblock Real shading in unreal engine 4.
+\newblock \emph{Proc. Physically Based Shading Theory Practice}, 4\penalty0 (3):\penalty0 1, 2013.
+
+\bibitem[Kerbl et~al.(2023)Kerbl, Kopanas, Leimkühler, and Drettakis]{kerbl20233d}
+Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, and George Drettakis.
+\newblock 3d gaussian splatting for real-time radiance field rendering, 2023.
+
+\bibitem[Li and Li(2022)]{li2022neural}
+Junxuan Li and Hongdong Li.
+\newblock Neural reflectance for shape recovery with shadow handling, 2022.
+
+\bibitem[Li et~al.(2022)Li, Slavcheva, Zollhoefer, Green, Lassner, Kim, Schmidt, Lovegrove, Goesele, Newcombe, and Lv]{li2022neural3D}
+Tianye Li, Mira Slavcheva, Michael Zollhoefer, Simon Green, Christoph Lassner, Changil Kim, Tanner Schmidt, Steven Lovegrove, Michael Goesele, Richard Newcombe, and Zhaoyang Lv.
+\newblock Neural 3d video synthesis from multi-view video, 2022.
+
+\bibitem[Li et~al.(2021)Li, Niklaus, Snavely, and Wang]{li2021neural}
+Zhengqi Li, Simon Niklaus, Noah Snavely, and Oliver Wang.
+\newblock Neural scene flow fields for space-time view synthesis of dynamic scenes, 2021.
+
+\bibitem[Liang et~al.(2023{\natexlab{a}})Liang, Chen, Li, Chen, Panneer, and Vijaykumar]{liang2023envidr}
+Ruofan Liang, Huiting Chen, Chunlin Li, Fan Chen, Selvakumar Panneer, and Nandita Vijaykumar.
+\newblock Envidr: Implicit differentiable renderer with neural environment lighting, 2023{\natexlab{a}}.
+
+\bibitem[Liang et~al.(2023{\natexlab{b}})Liang, Zhang, Li, Yang, Guan, and Vijaykumar]{liang2023spidr}
+Ruofan Liang, Jiahao Zhang, Haoda Li, Chen Yang, Yushi Guan, and Nandita Vijaykumar.
+\newblock Spidr: Sdf-based neural point fields for illumination and deformation, 2023{\natexlab{b}}.
+
+\bibitem[Liang et~al.(2023{\natexlab{c}})Liang, Khan, Li, Nguyen-Phuoc, Lanman, Tompkin, and Xiao]{liang2023gaufre}
+Yiqing Liang, Numair Khan, Zhengqin Li, Thu Nguyen-Phuoc, Douglas Lanman, James Tompkin, and Lei Xiao.
+\newblock Gaufre: Gaussian deformation fields for real-time dynamic novel view synthesis, 2023{\natexlab{c}}.
+
+\bibitem[Liang et~al.(2023{\natexlab{d}})Liang, Zhang, Feng, Shan, and Jia]{liang2023gs}
+Zhihao Liang, Qi Zhang, Ying Feng, Ying Shan, and Kui Jia.
+\newblock Gs-ir: 3d gaussian splatting for inverse rendering.
+\newblock \emph{arXiv preprint arXiv:2311.16473}, 2023{\natexlab{d}}.
+
+\bibitem[Lin et~al.(2022)Lin, Peng, Xu, Yan, Shuai, Bao, and Zhou]{lin2022efficient}
+Haotong Lin, Sida Peng, Zhen Xu, Yunzhi Yan, Qing Shuai, Hujun Bao, and Xiaowei Zhou.
+\newblock Efficient neural radiance fields for interactive free-viewpoint video, 2022.
+
+\bibitem[Liu et~al.(2023{\natexlab{a}})Liu, Wang, Lin, Long, Wang, Liu, Komura, and Wang]{liu2023nero}
+Yuan Liu, Peng Wang, Cheng Lin, Xiaoxiao Long, Jiepeng Wang, Lingjie Liu, Taku Komura, and Wenping Wang.
+\newblock Nero: Neural geometry and brdf reconstruction of reflective objects from multiview images, 2023{\natexlab{a}}.
+
+\bibitem[Liu et~al.(2023{\natexlab{b}})Liu, Gao, Meuleman, Tseng, Saraf, Kim, Chuang, Kopf, and Huang]{liu2023robust}
+Yu-Lun Liu, Chen Gao, Andreas Meuleman, Hung-Yu Tseng, Ayush Saraf, Changil Kim, Yung-Yu Chuang, Johannes Kopf, and Jia-Bin Huang.
+\newblock Robust dynamic radiance fields.
+\newblock In \emph{CVPR}, 2023{\natexlab{b}}.
+
+\bibitem[Ma et~al.(2024)Ma, Liu, Wang, Liu, Liu, and Wang]{ma2024humannerf}
+Caoyuan Ma, Yu-Lun Liu, Zhixiang Wang, Wu Liu, Xinchen Liu, and Zheng Wang.
+\newblock Humannerf-se: A simple yet effective approach to animate humannerf with diverse poses.
+\newblock In \emph{CVPR}, 2024.
+
+\bibitem[Ma et~al.(2023)Ma, Agrawal, Turki, Kim, Gao, Sander, Zollh{\"o}fer, and Richardt]{ma2023specnerf}
+Li Ma, Vasu Agrawal, Haithem Turki, Changil Kim, Chen Gao, Pedro Sander, Michael Zollh{\"o}fer, and Christian Richardt.
+\newblock Specnerf: Gaussian directional encoding for specular reflections.
+\newblock \emph{arXiv preprint arXiv:2312.13102}, 2023.
+
+\bibitem[Mihajlovic et~al.(2024)Mihajlovic, Prokudin, Tang, Maier, Bogo, Tung, and Boyer]{mihajlovic2024splatfields}
+Marko Mihajlovic, Sergey Prokudin, Siyu Tang, Robert Maier, Federica Bogo, Tony Tung, and Edmond Boyer.
+\newblock Splatfields: Neural gaussian splats for sparse 3d and 4d reconstruction.
+\newblock \emph{arXiv preprint arXiv:2409.11211}, 2024.
+
+\bibitem[Munkberg et~al.(2022)Munkberg, Hasselgren, Shen, Gao, Chen, Evans, M\"uller, and Fidler]{Munkberg_2022_CVPR}
+Jacob Munkberg, Jon Hasselgren, Tianchang Shen, Jun Gao, Wenzheng Chen, Alex Evans, Thomas M\"uller, and Sanja Fidler.
+\newblock {Extracting Triangular 3D Models, Materials, and Lighting From Images}.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 8280--8290, 2022.
+
+\bibitem[Park et~al.(2021{\natexlab{a}})Park, Sinha, Barron, Bouaziz, Goldman, Seitz, and Martin-Brualla]{park2021nerfies}
+Keunhong Park, Utkarsh Sinha, Jonathan~T. Barron, Sofien Bouaziz, Dan~B Goldman, Steven~M. Seitz, and Ricardo Martin-Brualla.
+\newblock Nerfies: Deformable neural radiance fields, 2021{\natexlab{a}}.
+
+\bibitem[Park et~al.(2021{\natexlab{b}})Park, Sinha, Hedman, Barron, Bouaziz, Goldman, Martin-Brualla, and Seitz]{park2021hypernerf}
+Keunhong Park, Utkarsh Sinha, Peter Hedman, Jonathan~T. Barron, Sofien Bouaziz, Dan~B Goldman, Ricardo Martin-Brualla, and Steven~M. Seitz.
+\newblock Hypernerf: A higher-dimensional representation for topologically varying neural radiance fields, 2021{\natexlab{b}}.
+
+\bibitem[Peng et~al.(2023)Peng, Yan, Shuai, Bao, and Zhou]{peng2023representing}
+Sida Peng, Yunzhi Yan, Qing Shuai, Hujun Bao, and Xiaowei Zhou.
+\newblock Representing volumetric videos as dynamic mlp maps, 2023.
+
+\bibitem[Pumarola et~al.(2020)Pumarola, Corona, Pons-Moll, and Moreno-Noguer]{pumarola2020dnerf}
+Albert Pumarola, Enric Corona, Gerard Pons-Moll, and Francesc Moreno-Noguer.
+\newblock D-nerf: Neural radiance fields for dynamic scenes, 2020.
+
+\bibitem[Shi et~al.(2023)Shi, Wu, Wu, Liu, Zhao, Feng, Liu, Zhang, Zhang, Zhou, et~al.]{shi2023gir}
+Yahao Shi, Yanmin Wu, Chenming Wu, Xing Liu, Chen Zhao, Haocheng Feng, Jingtuo Liu, Liangjun Zhang, Jian Zhang, Bin Zhou, et~al.
+\newblock Gir: 3d gaussian inverse rendering for relightable scene factorization.
+\newblock \emph{arXiv preprint arXiv:2312.05133}, 2023.
+
+\bibitem[Song et~al.(2023)Song, Chen, Li, Chen, Chen, Yuan, Xu, and Geiger]{song2023nerfplayer}
+Liangchen Song, Anpei Chen, Zhong Li, Zhang Chen, Lele Chen, Junsong Yuan, Yi Xu, and Andreas Geiger.
+\newblock Nerfplayer: A streamable dynamic scene representation with decomposed neural radiance fields, 2023.
+
+\bibitem[Srinivasan et~al.(2020)Srinivasan, Deng, Zhang, Tancik, Mildenhall, and Barron]{srinivasan2020nerv}
+Pratul~P. Srinivasan, Boyang Deng, Xiuming Zhang, Matthew Tancik, Ben Mildenhall, and Jonathan~T. Barron.
+\newblock Nerv: Neural reflectance and visibility fields for relighting and view synthesis, 2020.
+
+\bibitem[Stearns et~al.(2024)Stearns, Harley, Uy, Dubost, Tombari, Wetzstein, and Guibas]{stearns2024dynamic}
+Colton Stearns, Adam Harley, Mikaela Uy, Florian Dubost, Federico Tombari, Gordon Wetzstein, and Leonidas Guibas.
+\newblock Dynamic gaussian marbles for novel view synthesis of casual monocular videos.
+\newblock \emph{arXiv preprint arXiv:2406.18717}, 2024.
+
+\bibitem[Tretschk et~al.(2021)Tretschk, Tewari, Golyanik, Zollhöfer, Lassner, and Theobalt]{tretschk2021nonrigid}
+Edgar Tretschk, Ayush Tewari, Vladislav Golyanik, Michael Zollhöfer, Christoph Lassner, and Christian Theobalt.
+\newblock Non-rigid neural radiance fields: Reconstruction and novel view synthesis of a dynamic scene from monocular video, 2021.
+
+\bibitem[Verbin et~al.(2022)Verbin, Hedman, Mildenhall, Zickler, Barron, and Srinivasan]{verbin2022ref}
+Dor Verbin, Peter Hedman, Ben Mildenhall, Todd Zickler, Jonathan~T Barron, and Pratul~P Srinivasan.
+\newblock Ref-nerf: Structured view-dependent appearance for neural radiance fields.
+\newblock In \emph{2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 5481--5490. IEEE, 2022.
+
+\bibitem[Verbin et~al.(2024{\natexlab{a}})Verbin, Mildenhall, Hedman, Barron, Zickler, and Srinivasan]{verbin2024eclipse}
+Dor Verbin, Ben Mildenhall, Peter Hedman, Jonathan~T Barron, Todd Zickler, and Pratul~P Srinivasan.
+\newblock Eclipse: Disambiguating illumination and materials using unintended shadows.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 77--86, 2024{\natexlab{a}}.
+
+\bibitem[Verbin et~al.(2024{\natexlab{b}})Verbin, Srinivasan, Hedman, Mildenhall, Attal, Szeliski, and Barron]{verbin2024nerf}
+Dor Verbin, Pratul~P Srinivasan, Peter Hedman, Ben Mildenhall, Benjamin Attal, Richard Szeliski, and Jonathan~T Barron.
+\newblock Nerf-casting: Improved view-dependent appearance with consistent reflections.
+\newblock \emph{arXiv preprint arXiv:2405.14871}, 2024{\natexlab{b}}.
+
+\bibitem[Walter et~al.(2007)Walter, Marschner, Li, and Torrance]{walter2007microfacet}
+Bruce Walter, Stephen~R Marschner, Hongsong Li, and Kenneth~E Torrance.
+\newblock Microfacet models for refraction through rough surfaces.
+\newblock \emph{Rendering techniques}, 2007:\penalty0 18th, 2007.
+
+\bibitem[Wang et~al.(2024)Wang, Ye, Gao, Austin, Li, and Kanazawa]{wang2024shape}
+Qianqian Wang, Vickie Ye, Hang Gao, Jake Austin, Zhengqi Li, and Angjoo Kanazawa.
+\newblock Shape of motion: 4d reconstruction from a single video.
+\newblock \emph{arXiv preprint arXiv:2407.13764}, 2024.
+
+\bibitem[Wu et~al.(2025)Wu, Chen, Hu, Wu, Chen, Chen, Su, Lee, and Liu]{wu2024denver}
+Chun-Hung Wu, Shih-Hong Chen, Chih-Yao Hu, Hsin-Yu Wu, Kai-Hsin Chen, Yu-You Chen, Chih-Hai Su, Chih-Kuo Lee, and Yu-Lun Liu.
+\newblock Denver: Deformable neural vessel representations for unsupervised video vessel segmentation.
+\newblock In \emph{CVPR}, 2025.
+
+\bibitem[Wu et~al.(2023)Wu, Yi, Fang, Xie, Zhang, Wei, Liu, Tian, and Wang]{wu20234d}
+Guanjun Wu, Taoran Yi, Jiemin Fang, Lingxi Xie, Xiaopeng Zhang, Wei Wei, Wenyu Liu, Qi Tian, and Xinggang Wang.
+\newblock 4d gaussian splatting for real-time dynamic scene rendering.
+\newblock \emph{arXiv preprint arXiv:2310.08528}, 2023.
+
+\bibitem[Xian et~al.(2021)Xian, Huang, Kopf, and Kim]{xian2021spacetime}
+Wenqi Xian, Jia-Bin Huang, Johannes Kopf, and Changil Kim.
+\newblock Space-time neural irradiance fields for free-viewpoint video, 2021.
+
+\bibitem[Yan et~al.(2023)Yan, Li, and Lee]{yan2023nerf}
+Zhiwen Yan, Chen Li, and Gim~Hee Lee.
+\newblock Nerf-ds: Neural radiance fields for dynamic specular objects.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 8285--8295, 2023.
+
+\bibitem[Yang et~al.(2023{\natexlab{a}})Yang, Gao, Li, Gao, Wang, and Zheng]{yang2023track}
+Jinyu Yang, Mingqi Gao, Zhe Li, Shang Gao, Fangjing Wang, and Feng Zheng.
+\newblock Track anything: Segment anything meets videos.
+\newblock \emph{arXiv preprint arXiv:2304.11968}, 2023{\natexlab{a}}.
+
+\bibitem[Yang et~al.(2023{\natexlab{b}})Yang, Gao, Zhou, Jiao, Zhang, and Jin]{yang2023deformable}
+Ziyi Yang, Xinyu Gao, Wen Zhou, Shaohui Jiao, Yuqing Zhang, and Xiaogang Jin.
+\newblock Deformable 3d gaussians for high-fidelity monocular dynamic scene reconstruction.
+\newblock \emph{arXiv preprint arXiv:2309.13101}, 2023{\natexlab{b}}.
+
+\bibitem[Yang et~al.(2024)Yang, Gao, Sun, Huang, Lyu, Zhou, Jiao, Qi, and Jin]{yang2024specgaussian}
+Ziyi Yang, Xinyu Gao, Yangtian Sun, Yihua Huang, Xiaoyang Lyu, Wen Zhou, Shaohui Jiao, Xiaojuan Qi, and Xiaogang Jin.
+\newblock Spec-gaussian: Anisotropic view-dependent appearance for 3d gaussian splatting, 2024.
+
+\bibitem[Ye et~al.(2024)Ye, Hou, and Zhou]{ye20243d}
+Keyang Ye, Qiming Hou, and Kun Zhou.
+\newblock 3d gaussian splatting with deferred reflection.
+\newblock In \emph{ACM SIGGRAPH 2024 Conference Papers}, pages 1--10, 2024.
+
+\bibitem[Yifan et~al.(2019)Yifan, Serena, Wu, {\"O}ztireli, and Sorkine-Hornung]{yifan2019differentiable}
+Wang Yifan, Felice Serena, Shihao Wu, Cengiz {\"O}ztireli, and Olga Sorkine-Hornung.
+\newblock Differentiable surface splatting for point-based geometry processing.
+\newblock \emph{ACM Transactions on Graphics (TOG)}, 38\penalty0 (6):\penalty0 1--14, 2019.
+
+\bibitem[Zhang et~al.(2023)Zhang, Yao, Li, Liu, Fang, McKinnon, Tsin, and Quan]{zhang2023neilf}
+Jingyang Zhang, Yao Yao, Shiwei Li, Jingbo Liu, Tian Fang, David McKinnon, Yanghai Tsin, and Long Quan.
+\newblock Neilf++: Inter-reflectable light fields for geometry and material estimation, 2023.
+
+\bibitem[Zhang et~al.(2021{\natexlab{a}})Zhang, Luan, Wang, Bala, and Snavely]{zhang2021physg}
+Kai Zhang, Fujun Luan, Qianqian Wang, Kavita Bala, and Noah Snavely.
+\newblock Physg: Inverse rendering with spherical gaussians for physics-based material editing and relighting.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 5453--5462, 2021{\natexlab{a}}.
+
+\bibitem[Zhang et~al.(2021{\natexlab{b}})Zhang, Srinivasan, Deng, Debevec, Freeman, and Barron]{Zhang_2021}
+Xiuming Zhang, Pratul~P. Srinivasan, Boyang Deng, Paul Debevec, William~T. Freeman, and Jonathan~T. Barron.
+\newblock Nerfactor: neural factorization of shape and reflectance under an unknown illumination.
+\newblock \emph{ACM Transactions on Graphics}, 40\penalty0 (6):\penalty0 1–18, 2021{\natexlab{b}}.
+
+\bibitem[Zhao et~al.(2024)Zhao, Srinivasan, Verbin, Park, Brualla, and Henzler]{zhao2024illuminerf}
+Xiaoming Zhao, Pratul~P Srinivasan, Dor Verbin, Keunhong Park, Ricardo~Martin Brualla, and Philipp Henzler.
+\newblock Illuminerf: 3d relighting without inverse rendering.
+\newblock \emph{arXiv preprint arXiv:2406.06527}, 2024.
+
+\bibitem[Zhu et~al.(2024)Zhu, Wang, and Yang]{zhu2024gs}
+Zuo-Liang Zhu, Beibei Wang, and Jian Yang.
+\newblock Gs-ror: 3d gaussian splatting for reflective object relighting via sdf priors.
+\newblock \emph{arXiv preprint arXiv:2406.18544}, 2024.
+
+\end{thebibliography}

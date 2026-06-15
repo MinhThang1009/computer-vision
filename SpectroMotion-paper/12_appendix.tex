@@ -1,0 +1,50 @@
+\section{Overview}
+\label{sec:appendix_section}
+Supplementary material goes here.
+This supplementary material presents additional results to complement the main manuscript. In Section \ref{sec:Implementation}, we detail our coarse-to-fine training strategy, along with the network architectures of the deformable Gaussian MLP and deformable reflection MLP. Subsequently, Section \ref{sec:result} presents additional results, including comprehensive comparisons, more visualizations, and training and rendering efficiency. Finally, in Section \ref{sec:limit}, we discuss the limitation of our approach and provide visual example of failure case. 
+
+
+
+\section{Implementation Details}~\label{sec:Implementation} We use PyTorch as our framework and 3DGS~\citep{kerbl20233d} as our codebase. Our coarse-to-fine training strategy is divided into three sequential stages: static, dynamic, and specular stages. 
+\paragraph{Static stage.} 
+In the static stage, we train the vanilla 3D Gaussian Splatting (3DGS) for 3000 iterations to stabilize the static geometry. 
+\paragraph{Dynamic stage.} 
+After the static stage, we move on to the dynamic stage. During this phase, we introduce a deformable Gaussian MLP to model dynamic objects. First, we optimize both the canonical Gaussians and the deformable Gaussian MLP for 3,000 iterations until the scene reaches a relatively stable state. Then, we introduce the normal loss $\mathcal{L}_{\text{normal}}$, enabling simultaneous optimization of the scene's normal and depth, and perform an additional 3,000 iterations to further refine the geometry.  The dynamic stage comprises a total of 6,000 training iterations.
+\paragraph{Specular stage.} 
+After the dynamic stage concludes, we transition to the specular stage, which involves changing the color representation from complete spherical harmonics to $\mathbf{c}_\mathbf{final}$. To mitigate potential geometry disruptions due to the initially incomplete $\mathbf{c}_\mathbf{final}$, we fix the deformable Gaussian MLP and all 3D Gaussian attributes except for zero-order SH, specular tint, and roughness, while temporarily suspending densification. After 6000 iterations, once $\mathbf{c}_\mathbf{final}$ becomes more complete, we resume optimization of all parameters and reinstate the densification process. Then, after another 3000 iterations, we stop the densification process. Concurrently, during the first 2000 iterations of the specular stage, we optimize only the canonical environment map to learn time-invariant lighting. For the canonical environment map, we use $6 \times 128 \times 128$ learnable parameters. Subsequently, we begin optimizing the deformable reflection MLP to capture time-varying lighting effects until the training is complete. The specular stage comprises a total of 31,000 training iterations. For the Peel Banana scene in the HyperNeRF dataset, we do not fix the deformable Gaussian MLP. We resume optimization of all parameters and reinstate the densification process after the first 4000 iterations of the specular stage. Then, after another 2000 iterations, we stop the densification process to prevent excessive growth in the number of 3D Gaussians, which could lead to GPU out-of-memory issues.
+
+For the entire experiment, we train for a total of 40,000 iterations and we use Adam optimizer.
+
+
+\subsection{Network Architecture of the Deformable Gaussian MLP and Deformable reflection MLP}
+\input{figs/deform_network}
+\input{figs/deform_refl}
+We follow Deformable 3DGS~\citep{yang2023deformable} and use deformable Gaussian MLP to predict each coordinate of 3D Gaussians and time to their corresponding deviations in position, rotation, and scaling. As shown in Fig. ~\ref{fig:deform_network}, the MLP initially processes the input through eight fully connected layers that employ ReLU activations, featuring 256-dimensional hidden layers and outputs a 256-dimensional feature vector. This vector is then passed through three additional fully connected layers combined with ReLU activation to separately output the offsets over time for position, rotation, and scaling. Notably, similar to NeRF, the feature vector and the input are concatenated in the fourth layer. For the deformable reflection MLP, we utilize the same network architecture, as shown in Fig.~\ref{fig:deform_refl}.
+
+\section{Additional Results}~\label{sec:result}
+\subsection{Dynamic specular object of NeRF-DS dataset.}
+\input{tables/dynamic_spec_tab}
+\input{figs/mask_result}
+Since each scene in the NeRF-DS dataset \citep{yan2023nerf} contains not only dynamic specular objects but also static background objects, we use Track Anything \citep{yang2023track} to obtain masks for the dynamic specular objects. This allows us to evaluate only the dynamic specular objects. As shown in Tab. \ref{tab:dynamic_spec_tab} and Fig. \ref{fig:dynamic_spec}, our method outperforms baselines when evaluating the dynamic specular objects in these monocular sequences.
+
+\subsection{Per-Scene results on the NeRF-DS Dataset}
+\input{figs/whole_scene_appendix}
+\input{figs/rgb_normal_depth}
+In Fig. \ref{fig:whole_scene_appendix}, we present qualitative results for each scene in the NeRF-DS dataset \citep{yan2023nerf}. The visualizations demonstrate that our method achieves superior rendering quality compared to other approaches. We also provide rendered test images and their corresponding normal maps and depth maps for each scene in the NeRF-DS dataset in Fig. \ref{fig:rgb_normal_depth}. 
+
+
+\subsection{Deformation magnitudes and color decomposition}
+\input{figs/dynamic_mask}
+\input{figs/decompose}
+Unlike NeRF-DS \citep{yan2023nerf}, our approach does not require mask supervision to clearly distinguish between static and dynamic objects, as illustrated in Fig.~\ref{fig:dynamic_mask}. Additionally, Fig.~\ref{fig:decompose} illustrates our method's decomposition results. As shown, our approach consistently achieves a realistic separation of specular and diffuse components across different scenes in the NeRF-DS dataset \citep{yan2023nerf}.
+
+\subsection{Training and rendering efficiency} 
+\input{tables/fps}
+In Tab. \ref{tab:fps}, we present the training time, FPS, and number of Gaussians from our experiments on each scene in the NeRF-DS dataset \citep{yan2023nerf}. The results show that for scenes with fewer than 178k Gaussians, our method achieves real-time rendering greater than or equal to 30 FPS. The experiments are conducted on an NVIDIA RTX 4090 GPU.
+
+
+\section{Limitation}~\label{sec:limit}
+\input{figs/limit}
+In some dramatic scenes, relying solely on the deformable Gaussian MLP and coarse-to-fine training strategy is insufficient, such as when an arm or body enters or exits the scene, leading to many floaters occurring. We provide visual results in Fig. \ref{fig:limit}.
+
+

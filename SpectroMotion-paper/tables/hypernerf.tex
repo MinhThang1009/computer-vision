@@ -1,0 +1,23 @@
+\begin{table*}[t]
+    \setlength{\tabcolsep}{3pt}
+    \centering
+    % \tiny
+    \caption{\textbf{Quantitative comparison on the HyperNeRF~\citep{park2021hypernerf} dataset.} We report the average PSNR, SSIM, and LPIPS (VGG) of several previous models. The \colorbox{red!25}{best}, the \colorbox{orange!25}{second best}, and \colorbox{yellow!25}{third best} results are denoted by red, orange, yellow. }
+    \label{tab:hypernerf}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{lccccccccccccccccccc}
+    \toprule
+     & \multicolumn{3}{c}{Broom} & &\multicolumn{3}{c}{3D printer}& &\multicolumn{3}{c}{Chicken}& &\multicolumn{3}{c}{Peel Banana}& &\multicolumn{3}{c}{\textbf{Mean}} \\ \cmidrule{2-4} \cmidrule{6-8} \cmidrule{10-12} \cmidrule{14-16}\cmidrule{18-20}
+    Method & PSNR↑ & SSIM↑& LPIPS↓& &PSNR↑ & SSIM↑& LPIPS↓& &PSNR↑ & SSIM↑& LPIPS↓& &PSNR↑ & SSIM↑& LPIPS↓& &PSNR↑ & SSIM↑& LPIPS↓  \\ 
+    \midrule
+    Deformable 3DGS~\citep{yang2023deformable} &\colorbox{yellow!25}{20.87} &{0.3202} &{0.5985} & &20.35&{0.6673}&\colorbox{orange!25}{0.3091} & &{22.63}&{0.6346} &\colorbox{red!25}{0.2616} & &\colorbox{orange!25}{27.27} &\colorbox{red!25}{0.8584} &\colorbox{red!25}{0.1828}& &{22.78} &{0.6201} &\colorbox{orange!25}{0.3380} \\ 
+    4DGS~\citep{wu20234d} &\colorbox{orange!25}{21.21} &\colorbox{yellow!25}{0.3555} &\colorbox{yellow!25}{0.5669} & &\colorbox{yellow!25}{21.90} &\colorbox{orange!25}{0.6993} &0.3198& &\colorbox{red!25}{28.69} &\colorbox{red!25}{0.8143} &\colorbox{orange!25}{0.2772} & &\colorbox{red!25}{27.77} &\colorbox{yellow!25}{0.8431} &\colorbox{yellow!25}{0.2049}& &\colorbox{red!25}{24.89} &\colorbox{red!25}{0.6781} &\colorbox{yellow!25}{0.3422} \\
+    GaussianShader~\citep{jiang2023gaussianshader} &17.21 &0.2263 &0.5812 & &17.31 &0.5926 &0.5054 & &19.70 &0.6520 &0.5004 & &19.99 &0.7097 &0.3308& &18.55 &0.5452 &0.4795 \\
+    GS-IR~\citep{liang2023gs} &20.46 &0.3420 &\colorbox{red!25}{0.5229} & &18.24 &0.5745 &0.5204 & &20.64 &0.6592 &0.4536 & &20.15 &{0.7159} &{0.3021}& &19.87 &0.5729 &0.4498 \\
+    NeRF-DS~\citep{yan2023nerf} &\colorbox{red!25}{22.37} &\colorbox{red!25}{0.4371} &0.5694 & &\colorbox{red!25}{22.16} &\colorbox{yellow!25}{0.6973} &\colorbox{yellow!25}{0.3134} & &\colorbox{yellow!25}{27.32} &\colorbox{yellow!25}{0.7949} &0.3139 & &{22.75} &0.6328 &0.3919& &\colorbox{orange!25}{23.65} &\colorbox{orange!25}{0.6405} &0.3972 \\
+    HyperNeRF~\citep{park2021hypernerf} &20.72 &\colorbox{orange!25}{0.4276} &0.5773 & &\colorbox{orange!25}{21.94} &\colorbox{red!25}{0.7003} &\colorbox{red!25}{0.3090} & &\colorbox{orange!25}{27.40} &\colorbox{orange!25}{0.8013} &{0.3052} & &22.36 &0.6257 &0.3956& &\colorbox{yellow!25}{23.11} &\colorbox{yellow!25}{0.6387} &{0.3968} \\
+    Ours &{20.24} &{0.3019} &\colorbox{orange!25}{0.5253} & &20.03 &0.6596 &{0.3206} & &21.70 &0.6225 &\colorbox{yellow!25}{0.2807} & &\colorbox{yellow!25}{26.91} &\colorbox{orange!25}{0.8510} &\colorbox{orange!25}{0.1914}& &22.22 &{0.6088} &\colorbox{red!25}{0.3295} \\ 
+    \bottomrule
+    \end{tabular}
+    }
+\end{table*}

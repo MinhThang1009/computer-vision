@@ -1,0 +1,20 @@
+\section{Introduction}
+\label{sec:intro}
+\input{figs/teaser}
+3D Gaussian Splatting (3DGS)~\citep{kerbl20233d} has emerged as a groundbreaking technique in 3D scene reconstruction, offering fast training and real-time rendering capabilities. By representing 3D scene using a collection of 3D Gaussians and employing a point-based rendering approach, 3DGS has significantly improved efficiency in novel view synthesis. However, extending 3DGS to model dynamic scenes, especially those containing specular surfaces accurately, has remained a significant challenge.
+
+Existing extensions of 3DGS have made progress in either dynamic scene reconstruction or specular object rendering, but none have successfully combined both aspects. Methods tackling dynamic scenes often struggle with accurately representing specular surfaces, while those focusing on specular rendering are limited to static scenes. This capability gap has hindered the application of 3DGS to real-world scenarios where both motion and specular reflections are present.
+
+We present SpectroMotion, a novel approach that addresses these limitations by combining 3D Gaussian Splatting with physically based rendering (PBR) and deformation fields. Our method introduces three key innovations: a residual correction technique for accurate surface normal computation during deformation, a deformable environment map that adapts to time-varying lighting conditions, and a coarse-to-fine training strategy that significantly enhances scene geometry and specular color prediction.
+
+Our evaluations demonstrate that SpectroMotion outperforms prior methods in view synthesis of scenes containing dynamic specular objects, as illustrated in Fig. \ref{fig:teaser}. It is the only 3DGS method capable of synthesizing photorealistic real-world dynamic specular scenes, surpassing state-of-the-art techniques in rendering complex, dynamic, and specular content. This advancement represents a significant leap in 3D scene reconstruction, particularly for challenging scenarios involving moving specular objects. 
+
+In summary, we make the following contributions:
+\begin{itemize}
+
+\item We propose SpectroMotion, a physically-based rendering (PBR) approach combining deformation fields and 3D Gaussian Splatting for real-world dynamic specular scenes.
+\item We introduce a residual correction method for accurate surface normals during deformation, coupled with a deformable environment map to handle time-varying lighting conditions in dynamic scenes.
+\item We develop a coarse-to-fine training strategy enhancing scene geometry and specular color prediction, outperforming state-of-the-art methods.
+\end{itemize}
+% To insert a figure: \input{figs/template}
+% Or table: \input{tables/template}

@@ -1,0 +1,80 @@
+{
+  "hellwarrior_psnr": {
+    "coarse/test/loss_viewpoint - psnr": [
+      [
+        3000,
+        15.13
+      ]
+    ],
+    "coarse/train/loss_viewpoint - psnr": [
+      [
+        3000,
+        15.39
+      ]
+    ],
+    "fine/test/loss_viewpoint - psnr": [
+      [
+        3000,
+        24.63
+      ],
+      [
+        7000,
+        27.45
+      ],
+      [
+        14000,
+        28.9
+      ]
+    ],
+    "fine/train/loss_viewpoint - psnr": [
+      [
+        3000,
+        26.09
+      ],
+      [
+        7000,
+        29.84
+      ],
+      [
+        14000,
+        35.6
+      ]
+    ]
+  },
+  "nerfds_aux": {
+    "sieve": {
+      "train_psnr": [
+        [
+          3000,
+          34.66
+        ],
+        [
+          7000,
+          36.65
+        ],
+        [
+          14000,
+          37.96
+        ]
+      ],
+      "init_points": 32143
+    },
+    "plate": {
+      "train_psnr": [
+        [
+          3000,
+          28.87
+        ],
+        [
+          7000,
+          30.13
+        ],
+        [
+          14000,
+          31.58
+        ]
+      ],
+      "init_points": 9714
+    }
+  }
+}

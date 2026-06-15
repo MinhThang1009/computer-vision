@@ -1,0 +1,29 @@
+{
+  "dataset": "dnerf",
+  "iter": 20000,
+  "scenes_done": [
+    "bouncingballs",
+    "hellwarrior",
+    "hook",
+    "jumpingjacks",
+    "lego",
+    "mutant",
+    "standup",
+    "trex"
+  ],
+  "n_scenes": 8,
+  "gpu": "Tesla T4",
+  "commit": "6d2a2d9",
+  "date": "2026-06-14 08:04",
+  "frames_per_scene": {
+    "bouncingballs": 20,
+    "hellwarrior": 20,
+    "hook": 20,
+    "jumpingjacks": 20,
+    "lego": 20,
+    "mutant": 20,
+    "standup": 20,
+    "trex": 20
+  },
+  "note": "torch 2.x/CUDA12 (Colab) — có thể lệch nhẹ so với paper (torch 1.13.1)"
+}
