@@ -454,10 +454,12 @@ $\Delta\mathcal{X}$) mà cả \textit{biến đổi hình dạng} (qua $\Delta r
 ví dụ một quả bóng bị nén dẹt khi chạm đất. Đáng chú ý là những gì
 \textbf{không} được biến dạng: Gaussian sau biến dạng
 $\mathcal{G}'=\{\mathcal{X}', r', s', \alpha, \mathcal{C}\}$ giữ nguyên độ mờ
-$\alpha$ và màu $\mathcal{C}$. Đây là một đánh đổi có chủ đích để giữ mạng nhỏ,
-nhưng như nhóm sẽ chỉ ra ở mục~\ref{sec:nerfds}, nó đồng nghĩa mọi hiệu ứng quang học biến đổi
-theo thời gian (phản xạ trên vật bóng, đổ bóng động) đều nằm ngoài khả năng biểu
-diễn của mô hình.
+$\alpha$ và màu $\mathcal{C}$. Thực ra mã nguồn có sẵn hai đầu biến dạng cho độ mờ và hệ số
+SH, nhưng chúng bị \textit{tắt mặc định} qua cờ \texttt{no\_do}/\texttt{no\_dshs} cho cấu hình
+đơn-view (D-NeRF, HyperNeRF, NeRF-DS) và chỉ được bật cho dữ liệu đa-view (Neu3D); đây là
+đánh đổi có chủ đích để giữ mạng nhỏ trên dữ liệu thưa. Như nhóm sẽ chỉ ra ở
+mục~\ref{sec:nerfds}, với cấu hình đơn-view này mọi hiệu ứng quang học biến đổi theo thời gian
+(phản xạ trên vật bóng, đổ bóng động) đều nằm ngoài khả năng biểu diễn của mô hình.
 
 \section{Tối ưu hai giai đoạn}
 
@@ -1038,7 +1040,9 @@ hình học, mọi hiệu ứng quang học động (phản xạ trượt trên 
 không gian biểu diễn; hệ quả đo được là 17,8 dB trên cảnh \textit{plate}, và trên
 NeRF-DS nói chung lợi thế chất lượng của 4D-GS không còn rõ: xếp sau các phương
 pháp chuyên cho vật phản chiếu (mục~\ref{sec:nerfds}). Bài báo gốc
-không đề cập hạn chế này.
+không đề cập hạn chế này. Vì SH tĩnh chỉ là một cờ mặc định, kiểm chứng trực tiếp giả
+thuyết này là bật \texttt{no\_dshs} cho SH biến đổi theo thời gian (như 4D-GS vốn làm với dữ
+liệu đa-view); việc này nằm ngoài phạm vi lần này nhưng là bước xác nhận tự nhiên cho sau này.
 
 Loại thứ hai đến từ \textbf{chế độ dữ liệu}. Phương pháp phụ thuộc mạnh vào
 chất lượng khởi tạo hình học và camera pose: thiếu điểm nền hoặc pose nhiễu làm
