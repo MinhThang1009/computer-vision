@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\caption{\textbf{Ablation study on different $\lambda_{\text{normal}}$}}
+\label{tab:lambda_normal}
+\begin{tabular}{lccc}
+    \toprule
+      & PSNR ↑ & SSIM ↑ & LPIPS ↓ \\
+    \midrule
+    $\lambda_{\text{normal}} = 1$ &8.35  &0.1031  &0.5954  \\
+    $\lambda_{\text{normal}} = 0.1$ &15.14  &0.4379  &0.4529  \\
+    $\lambda_{\text{normal}} = 0.01$ &\textbf{24.17}  &\textbf{0.8522}  &\textbf{0.1778}  \\
+    $\lambda_{\text{normal}} = 0.001$ & 24.13  & 0.8522  &0.1796  \\
+    $\lambda_{\text{normal}} = 0.0001$ & 24.10  & 0.8520  &0.1803  \\
+    \bottomrule
+\end{tabular}
+\end{table}

@@ -16,3 +16,7 @@ __pycache__/
 # Hệ điều hành
 Thumbs.db
 .DS_Store
+
+# Claude Code session/memory (không commit)
+.claude/
+*.bak

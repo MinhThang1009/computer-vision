@@ -1,0 +1,4 @@
+dataset,type,PSNR,SSIM,LPIPS-vgg,fps,storage_mb,train_time_sec,n_gaussians
+dnerf,synthetic,34.0589,0.9787,0.0262,38.31,24.8,808.69,44895.88
+hypernerf,real,25.1343,0.6853,0.3374,11.71,70.2,3178.88,160429.75
+nerfds,real-specular,22.7622,0.822,0.2188,81.65,45.37,,59506.57

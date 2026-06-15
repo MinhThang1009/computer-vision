@@ -1,0 +1,21 @@
+{
+  "dataset": "hypernerf",
+  "iter": 14000,
+  "scenes_done": [
+    "3dprinter",
+    "broom2",
+    "chicken",
+    "banana"
+  ],
+  "n_scenes": 4,
+  "gpu": "Tesla T4",
+  "commit": "209ba00",
+  "date": "2026-06-14 15:15",
+  "frames_per_scene": {
+    "3dprinter": 207,
+    "broom2": 197,
+    "chicken": 164,
+    "banana": 513
+  },
+  "note": "torch 2.x/CUDA12 (Colab) — có thể lệch nhẹ so với paper (torch 1.13.1)"
+}

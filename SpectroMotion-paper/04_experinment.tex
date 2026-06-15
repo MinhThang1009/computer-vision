@@ -1,0 +1,55 @@
+\section{Experiments}
+\label{sec:experinment}
+\subsection{Evaluation Results}
+We evaluate our method on two real-world datasets: NeRF-DS dataset~\citep{yan2023nerf} and HyperNeRF dataset~\citep{park2021hypernerf}. While GaussianShader~\citep{jiang2023gaussianshader} and GS-IR~\citep{liang2023gs} are originally designed for static scenes and are included here only as reference baselines, we train our method and all baseline approaches for 40,000 iterations to ensure fair comparison. 
+
+\input{tables/whole_scene_tab}
+\input{figs/whole_scene}
+
+\vspace{3pt}  \noindent {\bf NeRF-DS dataset.}
+ The NeRF-DS dataset \citep{yan2023nerf} is a monocular video dataset comprising seven real-world scenes from daily life featuring various types of moving or deforming specular objects. We compare our method with the most relevant state-of-the-art approaches. As shown in Tab. \ref{tab:whole_scene_tab} and Fig. \ref{fig:whole_scene}, the quantitative results demonstrate that our method decisively outperforms baselines in reconstructing and rendering real-world highly reflective dynamic specular scenes. 
+ 
+ The rendering speed is correlated with the quantity of 3D Gaussians. When the number of 3D Gaussians is below 178k, our method can achieve real-time rendering over 30 FPS on an NVIDIA RTX 4090.
+
+\input{tables/hypernerf_main}
+\input{figs/hypernerf}
+
+\vspace{3pt}  \noindent {\bf HyperNeRF dataset.}
+The HyperNeRF dataset contains real-world dynamic scenes and does not include specular objects. As shown in Tab. \ref{tab:hyper_main} and Fig. \ref{fig:hypernerf}, the results demonstrate that we are on par with state-of-the-art techniques for rendering novel views, and our method's performance is not limited to shiny scenes.
+
+% \input{figs/dynamic_mask}
+% \input{figs/decompose}
+\input{figs/normal}
+% Notably, unlike NeRF-DS, our approach does not require mask supervision to clearly distinguish between static and dynamic objects, as illustrated in Fig.~\ref{fig:dynamic_mask}. Additionally, Fig.~\ref{fig:decompose} illustrates our method's decomposition results. Our approach consistently achieves a realistic separation of specular and diffuse components across different scenes in the NeRF-DS dataset. 
+In Fig.~\ref{fig:normal_compared}, we compare our method's normal maps with those from Deformable 3DGS~\citep{yang2023deformable} and NeRF-DS~\citep{yan2023nerf}. For Deformable 3DGS~\citep{yang2023deformable}, we obtain the normals by using the shortest axes of the deformed 3D Gaussians. As demonstrated, our method produces significantly better quality normal maps compared to Deformable 3DGS~\citep{yang2023deformable} and NeRF-DS~\citep{yan2023nerf}.
+
+\subsection{Ablation Study}
+For a fair comparison, we train our method and all ablation
+experiments for 40,000 iterations.
+
+
+\input{tables/stage}
+\input{figs/stage}
+
+\vspace{3pt}  \noindent {\bf Different coarse to fine training strategy stages.}
+As shown in Tab. \ref{tab:stage} and Fig. \ref{fig:stage}, each stage contributes effectively to the model's performance. The Dynamic stage enhances dynamic object stability compared to the Static stage alone, while the Specular stage improves reflection clarity beyond the combined Static and Dynamic stages. 
+
+\input{tables/abalation_with_losses}
+\input{figs/ab_study_vis}
+
+\vspace{3pt}  \noindent {\bf Ablation study on coarse-to-fine, and loss function.}
+The model's performance was evaluated without key components: the coarse-to-fine training strategy, normal loss $\mathcal{L}_{\text{normal}}$, normal regularization $\mathcal{L}_{\text{reg}}$, and $\gamma^k$. Fig.~\ref{fig:ab_study_vis} and Tab. \ref{tab:abalation_with_losses} illustrate the effects of these omissions.
+Without the coarse-to-fine approach, the model, trained directly at the specular stage, produces incomplete scene geometry, affecting environment map queries for specular color. Omitting normal loss $\mathcal{L}_{\text{normal}}$ removes direct supervision on normals and leads to inaccurate reflection directions and less precise specular colors. Removing normal regularization $\mathcal{L}_{\text{reg}}$ allows the normal residual to dominate normal optimization, resulting in insufficient optimization of the 3D Gaussians' shortest axis towards the correct normal, which in turn reduces the rendering quality. The normal residual decreases for non-flattened and flat Gaussians without $\gamma^k$ in normal regularization. This particularly affects less flat  3D Gaussians whose shortest axis significantly deviates from the surface normal. The insufficient normal residual correction causes these 3D Gaussians' shortest axes to deviate greatly from their original direction in an attempt to align with the surface normal, ultimately reducing rendering quality. 
+
+\input{tables/abalation_sh}
+\input{figs/env}
+
+\vspace{3pt}  \noindent {\bf Ablation study on SH, Static environment map, and Deformable environment map.}
+Fig.~\ref{fig:env} and Tab. \ref{tab:abalation_sh} demonstrate the superiority of the deformable environment map over the static environment map, which in turn outperforms Spherical Harmonics (SH). SH struggles to accurately model high-frequency specular colors. While the static environment map can model high-frequency colors, it is best suited for static lighting conditions. In contrast, the deformable environment map models time-varying lighting, offering superior performance for dynamic scenes.
+
+
+\input{tables/ablation_2dgs}
+\input{figs/ablation_2DGS}
+
+\vspace{3pt}  \noindent {\bf Ablation study on 2DGS~\citep{huang20242d} and without Physical Normal Estimation.}
+In Fig. \ref{fig:ablation_2DGS} and Tab. \ref{tab:ablation_2dgs}, "2DGS" represents replacing our 3D Gaussian with 2D Gaussian representation. Since 2DGS inherently includes normals, we omit physical normal estimation. "w/o N.E." means skipping physical normal estimation and using the shortest axis of 3D Gaussians as the normal. This causes the normal loss $\mathcal{L}_{\text{normal}}$ to directly supervise the shortest axes, making some axes deviate significantly to align with surface normals, resulting in degraded rendering quality.

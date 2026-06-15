@@ -1,0 +1,11 @@
+# env-compat (fork): bỏ torch/torchvision/torchaudio để DÙNG bản có sẵn trên Colab/Kaggle
+# (Python 3.12 / torch 2.x / CUDA 12); bỏ 'argparse' (gói PyPI rác che stdlib);
+# thay 'mmcv==1.6.0' -> 'mmengine' (mmcv.Config.fromfile -> mmengine.Config.fromfile).
+# KHÔNG đổi thuật toán/thông số — chỉ tương thích môi trường mới.
+matplotlib
+lpips
+plyfile
+pytorch_msssim
+open3d
+imageio[ffmpeg]
+mmengine

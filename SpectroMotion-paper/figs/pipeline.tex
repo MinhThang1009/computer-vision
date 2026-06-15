@@ -1,0 +1,7 @@
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/pipeline.pdf}
+    \vspace{-4mm}
+    \caption{\textbf{Method Overview.} Our method stabilizes the scene geometry through three stages. In the static stage, we stabilize the geometry of the static scene by minimizing photometric loss $\mathcal{L}_{\text{color}}$ between vanilla 3DGS renders and ground truth images. The dynamic stage combines canonical 3D Gaussians $\textbf{G}$ with a deformable Gaussian MLP to model dynamic scenes while simultaneously minimizing normal loss $\mathcal{L}_{\text{normal}}$ between rendered normal map $\mathbf{N}^t$ and gradient normal map from depth map ${\mathbf{D}^t}$, thus further enhancing the overall scene geometry. Finally, the specular stage introduces a deformable reflection MLP to handle changing environment lighting, deforming reflection directions $\omega^t_r$ to query a canonical environment map for specular color $\mathbf{c}_s^t$. It is then combined with diffuse color $\mathbf{c_d}$ (using zero-order spherical harmonics) and learnable specular tint $\mathbf{s_\mathbf{tint}}$ per 3D Gaussian to obtain the final color $\mathbf{c}_\mathbf{final}^t$. This approach enables the modeling of dynamic specular scenes and high-quality novel view rendering.}
+    \label{fig:pipeline}
+\end{figure*}

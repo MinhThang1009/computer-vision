@@ -1,0 +1,27 @@
+{
+  "dataset": "nerfds",
+  "iter": 14000,
+  "scenes_done": [
+    "as",
+    "basin",
+    "bell",
+    "cup",
+    "plate",
+    "press",
+    "sieve"
+  ],
+  "n_scenes": 7,
+  "gpu": "Tesla T4",
+  "commit": "209ba00",
+  "date": "2026-06-14 16:26",
+  "frames_per_scene": {
+    "as": 846,
+    "basin": 668,
+    "bell": 881,
+    "cup": 807,
+    "plate": 424,
+    "press": 487,
+    "sieve": 584
+  },
+  "note": "torch 2.x/CUDA12 (Colab) — có thể lệch nhẹ so với paper (torch 1.13.1)"
+}

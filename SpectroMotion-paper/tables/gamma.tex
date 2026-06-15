@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\caption{\textbf{Ablation study on different $\gamma^k$}}
+\label{tab:gamma}
+\begin{tabular}{lccc}
+    \toprule
+      & PSNR ↑ & SSIM ↑ & LPIPS ↓ \\
+    \midrule
+    $\gamma^k, \quad k = 0$ &24.09  &0.8515  &0.1818  \\
+    $\gamma^k, \quad k = 1$ &24.14  &\textbf{0.8523}  &0.1786  \\
+    $\gamma^k, \quad k = 5$ &\textbf{24.17}  &0.8522  &\textbf{0.1778}  \\
+    $\gamma^k, \quad k = 50$ & 24.11  & 0.8521  &0.1793  \\
+    \bottomrule
+\end{tabular}
+\end{table}

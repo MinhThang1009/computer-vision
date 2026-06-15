@@ -1,0 +1,22 @@
+\newcommand{\best}[1]{{\textbf{\textcolor{red}{#1}}}}
+\newcommand{\second}[1]{{\underline{\textcolor{blue}{#1}}}}
+
+\begin{table}[ht]
+\vspace{-1.5mm}
+\centering
+\footnotesize
+% \caption{Comparison of improvements among our method, Deformable 3DGS, and GaussianShader.}
+\label{tab:improve}
+\vspace{-2mm}
+\begin{tabular}{lccc}
+\toprule
+Method & $\Delta$PSNR  & $\Delta$SSIM  & $\Delta$LPIPS  \\
+\midrule
+GaussianShader (CVPR'24)&-0.94 &-0.0120 &+0.0040 \\
+Deformable 3DGS (CVPR'24)&+0.51 &+0.0031 &+0.0047 \\
+Ours (best checkpoint)&\best{+1.19} &\best{+0.0159} &\second{+0.0080}\\
+Ours (40k iterations)&\second{+0.74} &\second{+0.0145} &\best{+0.0337}\\
+\bottomrule
+\end{tabular}
+\vspace{-4mm}
+\end{table}

@@ -1,0 +1,392 @@
+\begin{thebibliography}{10}\itemsep=-1pt
+
+\bibitem{bagautdinov2018modeling}
+Timur Bagautdinov, Chenglei Wu, Jason Saragih, Pascal Fua, and Yaser Sheikh.
+\newblock Modeling facial geometry using compositional vaes.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 3877--3886, 2018.
+
+\bibitem{barron2022mipnerf360}
+Jonathan~T. Barron, Ben Mildenhall, Dor Verbin, Pratul~P. Srinivasan, and Peter
+  Hedman.
+\newblock Mip-nerf 360: Unbounded anti-aliased neural radiance fields.
+\newblock {\em CVPR}, 2022.
+
+\bibitem{basri2003lambertian}
+Ronen Basri and David~W Jacobs.
+\newblock Lambertian reflectance and linear subspaces.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  25(2):218--233, 2003.
+
+\bibitem{bi2020neural}
+Sai Bi, Zexiang Xu, Pratul Srinivasan, Ben Mildenhall, Kalyan Sunkavalli,
+  Milo{\v{s}} Ha{\v{s}}an, Yannick Hold-Geoffroy, David Kriegman, and Ravi
+  Ramamoorthi.
+\newblock Neural reflectance fields for appearance acquisition.
+\newblock {\em arXiv preprint arXiv:2008.03824}, 2020.
+
+\bibitem{nerd2021}
+Mark Boss, Raphael Braun, Varun Jampani, Jonathan~T. Barron, Ce Liu, and
+  Hendrik~P.A. Lensch.
+\newblock Nerd: Neural reflectance decomposition from image collections.
+\newblock In {\em 2021 IEEE/CVF International Conference on Computer Vision
+  (ICCV)}, pages 12664--12674, 2021.
+
+\bibitem{boss2021neural}
+Mark Boss, Varun Jampani, Raphael Braun, Ce Liu, Jonathan Barron, and Hendrik
+  Lensch.
+\newblock Neural-pil: Neural pre-integrated lighting for reflectance
+  decomposition.
+\newblock {\em Advances in Neural Information Processing Systems},
+  34:10691--10704, 2021.
+
+\bibitem{bozic2020nrtrack}
+Aljaz Bozic, Pablo Palafox, Michael Zollh{\"o}fer, Angela Dai, Justus Thies,
+  and Matthias Nie{\ss}ner.
+\newblock Neural non-rigid tracking.
+\newblock {\em Advances in Neural Information Processing Systems},
+  33:18727--18737, 2020.
+
+\bibitem{cheng2021mivos}
+Ho~Kei Cheng, Yu-Wing Tai, and Chi-Keung Tang.
+\newblock Modular interactive video object segmentation: Interaction-to-mask,
+  propagation and difference-aware fusion.
+\newblock In {\em CVPR}, 2021.
+
+\bibitem{cohen1993radiosity}
+Michael~F Cohen, John~R Wallace, and Pat Hanrahan.
+\newblock {\em Radiosity and realistic image synthesis}.
+\newblock Morgan Kaufmann, 1993.
+
+\bibitem{environment_map}
+F.~C. Crow.
+\newblock A more flexible image generation environment.
+\newblock {\em SIGGRAPH Comput. Graph.}, 16(3):9–18, jul 1982.
+
+\bibitem{fan2017point}
+Haoqiang Fan, Hao Su, and Leonidas~J Guibas.
+\newblock A point set generation network for 3d object reconstruction from a
+  single image.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 605--613, 2017.
+
+\bibitem{gao2022dynamic}
+Hang Gao, Ruilong Li, Shubham Tulsiani, Bryan Russell, and Angjoo Kanazawa.
+\newblock Monocular dynamic view synthesis: A reality check.
+\newblock In {\em NeurIPS}, 2022.
+
+\bibitem{girdhar2016learning}
+Rohit Girdhar, David~F Fouhey, Mikel Rodriguez, and Abhinav Gupta.
+\newblock Learning a predictable and generative vector representation for
+  objects.
+\newblock In {\em European Conference on Computer Vision}, pages 484--499.
+  Springer, 2016.
+
+\bibitem{goral1984modeling}
+Cindy~M Goral, Kenneth~E Torrance, Donald~P Greenberg, and Bennett Battaile.
+\newblock Modeling the interaction of light between diffuse surfaces.
+\newblock {\em ACM SIGGRAPH computer graphics}, 18(3):213--222, 1984.
+
+\bibitem{guo2022nerfren}
+Yuan-Chen Guo, Di Kang, Linchao Bao, Yu He, and Song-Hai Zhang.
+\newblock Nerfren: Neural radiance fields with reflections.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition}, pages 18409--18418, 2022.
+
+\bibitem{vlastimil2000rayshooting}
+Vlastimil Havran and Jir{\'{\i}} Bittner.
+\newblock {LCTS:} ray shooting using longest common traversal sequences.
+\newblock {\em Comput. Graph. Forum}, 19(3):59--70, 2000.
+
+\bibitem{jensen2001realistic}
+Henrik~Wann Jensen.
+\newblock {\em Realistic image synthesis using photon mapping}, volume 364.
+\newblock Ak Peters Natick, 2001.
+
+\bibitem{jiang2020local}
+Chiyu Jiang, Avneesh Sud, Ameesh Makadia, Jingwei Huang, Matthias Nie{\ss}ner,
+  Thomas Funkhouser, et~al.
+\newblock Local implicit grid representations for 3d scenes.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition}, pages 6001--6010, 2020.
+
+\bibitem{kajiya1986rendering}
+James~T. Kajiya.
+\newblock The rendering equation.
+\newblock In {\em Proceedings of the 13th Annual Conference on Computer
+  Graphics and Interactive Techniques}, SIGGRAPH '86, page 143–150, New York,
+  NY, USA, 1986. Association for Computing Machinery.
+
+\bibitem{kajiya1984ray}
+James~T Kajiya and Brian~P Von~Herzen.
+\newblock Ray tracing volume densities.
+\newblock {\em ACM SIGGRAPH computer graphics}, 18(3):165--174, 1984.
+
+\bibitem{li2022neural}
+Junxuan Li and Hongdong Li.
+\newblock Neural reflectance for shape recovery with shadow handling.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition}, pages 16221--16230, 2022.
+
+\bibitem{li2020nsff}
+Zhengqi Li, Simon Niklaus, Noah Snavely, and Oliver Wang.
+\newblock Neural scene flow fields for space-time view synthesis of dynamic
+  scenes.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR)}, 2021.
+
+\bibitem{lombardi2019neuralvolume}
+Stephen Lombardi, Tomas Simon, Jason Saragih, Gabriel Schwartz, Andreas
+  Lehrmann, and Yaser Sheikh.
+\newblock Neural volumes: Learning dynamic renderable volumes from images.
+\newblock {\em arXiv preprint arXiv:1906.07751}, 2019.
+
+\bibitem{mescheder2019occupancy}
+Lars Mescheder, Michael Oechsle, Michael Niemeyer, Sebastian Nowozin, and
+  Andreas Geiger.
+\newblock Occupancy networks: Learning 3d reconstruction in function space.
+\newblock In {\em Proceedings of the IEEE/CVF conference on computer vision and
+  pattern recognition}, pages 4460--4470, 2019.
+
+\bibitem{mildenhall2020nerf}
+Ben Mildenhall, Pratul~P. Srinivasan, Matthew Tancik, Jonathan~T. Barron, Ravi
+  Ramamoorthi, and Ren Ng.
+\newblock Nerf: Representing scenes as neural radiance fields for view
+  synthesis.
+\newblock In {\em ECCV}, 2020.
+
+\bibitem{multinerf2022}
+Ben Mildenhall, Dor Verbin, Pratul~P. Srinivasan, Peter Hedman, Ricardo
+  Martin-Brualla, and Jonathan~T. Barron.
+\newblock {MultiNeRF}: {A} {Code} {Release} for {Mip-NeRF} 360, {Ref-NeRF}, and
+  {RawNeRF}, 2022.
+
+\bibitem{newcombe2015dynamicfusion}
+Richard~A Newcombe, Dieter Fox, and Steven~M Seitz.
+\newblock Dynamicfusion: Reconstruction and tracking of non-rigid scenes in
+  real-time.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 343--352, 2015.
+
+\bibitem{Nicodemus1977GeometricalCA}
+Fred~E. Nicodemus, Joseph~C. Richmond, Jack~J. Hsia, Irving~W. Ginsberg, and T.
+  Limperis.
+\newblock Geometrical considerations and nomenclature for reflectance.
+\newblock 1977.
+
+\bibitem{niemeyer2019occupancyflow}
+Michael Niemeyer, Lars Mescheder, Michael Oechsle, and Andreas Geiger.
+\newblock Occupancy flow: 4d reconstruction by learning particle dynamics.
+\newblock In {\em Proceedings of the IEEE/CVF international conference on
+  computer vision}, pages 5379--5389, 2019.
+
+\bibitem{niemeyer2020differentiable}
+Michael Niemeyer, Lars Mescheder, Michael Oechsle, and Andreas Geiger.
+\newblock Differentiable volumetric rendering: Learning implicit 3d
+  representations without 3d supervision.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition}, pages 3504--3515, 2020.
+
+\bibitem{oechsle2021unisurf}
+Michael Oechsle, Songyou Peng, and Andreas Geiger.
+\newblock Unisurf: Unifying neural implicit surfaces and radiance fields for
+  multi-view reconstruction.
+\newblock In {\em Proceedings of the IEEE/CVF International Conference on
+  Computer Vision}, pages 5589--5599, 2021.
+
+\bibitem{Park_2019_CVPR}
+Jeong~Joon Park, Peter Florence, Julian Straub, Richard Newcombe, and Steven
+  Lovegrove.
+\newblock Deepsdf: Learning continuous signed distance functions for shape
+  representation.
+\newblock In {\em The IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, June 2019.
+
+\bibitem{park2021nerfies}
+Keunhong Park, Utkarsh Sinha, Jonathan~T. Barron, Sofien Bouaziz, Dan~B
+  Goldman, Steven~M. Seitz, and Ricardo Martin-Brualla.
+\newblock Nerfies: Deformable neural radiance fields.
+\newblock {\em ICCV}, 2021.
+
+\bibitem{park2021hypernerf}
+Keunhong Park, Utkarsh Sinha, Peter Hedman, Jonathan~T. Barron, Sofien Bouaziz,
+  Dan~B Goldman, Ricardo Martin-Brualla, and Steven~M. Seitz.
+\newblock Hypernerf: A higher-dimensional representation for topologically
+  varying neural radiance fields.
+\newblock {\em ACM Trans. Graph.}, 40(6), dec 2021.
+
+\bibitem{phong}
+Bui~Tuong Phong.
+\newblock Illumination for computer generated pictures.
+\newblock {\em Commun. ACM}, 18(6):311–317, jun 1975.
+
+\bibitem{pumarola2020dnerf}
+Albert Pumarola, Enric Corona, Gerard Pons-Moll, and Francesc Moreno-Noguer.
+\newblock {D-NeRF: Neural Radiance Fields for Dynamic Scenes}.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition}, 2020.
+
+\bibitem{purcell2002raytracing}
+Timothy~J. Purcell, Ian Buck, William~R. Mark, and Pat Hanrahan.
+\newblock Ray tracing on programmable graphics hardware.
+\newblock In {\em Proceedings of the 29th Annual Conference on Computer
+  Graphics and Interactive Techniques}, SIGGRAPH '02, page 703–712, New York,
+  NY, USA, 2002. Association for Computing Machinery.
+
+\bibitem{precomputation-rendering}
+Ravi Ramamoorthi.
+\newblock Precomputation-based rendering.
+\newblock {\em Found. Trends. Comput. Graph. Vis.}, 3(4):281–369, apr 2009.
+
+\bibitem{ramamoorthi2001efficient}
+Ravi Ramamoorthi and Pat Hanrahan.
+\newblock An efficient representation for irradiance environment maps.
+\newblock In {\em Proceedings of the 28th annual conference on Computer
+  graphics and interactive techniques}, pages 497--500, 2001.
+
+\bibitem{ramamoorthi2001signal}
+Ravi Ramamoorthi and Pat Hanrahan.
+\newblock A signal-processing framework for inverse rendering.
+\newblock In {\em Proceedings of the 28th annual conference on Computer
+  graphics and interactive techniques}, pages 117--128, 2001.
+
+\bibitem{reiser2021kilonerf}
+Christian Reiser, Songyou Peng, Yiyi Liao, and Andreas Geiger.
+\newblock Kilonerf: Speeding up neural radiance fields with thousands of tiny
+  mlps.
+\newblock In {\em Proceedings of the IEEE/CVF International Conference on
+  Computer Vision}, pages 14335--14345, 2021.
+
+\bibitem{schoenberger2016sfm}
+Johannes~Lutz Sch\"{o}nberger and Jan-Michael Frahm.
+\newblock Structure-from-motion revisited.
+\newblock In {\em Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, 2016.
+
+\bibitem{schoenberger2016mvs}
+Johannes~Lutz Sch\"{o}nberger, Enliang Zheng, Marc Pollefeys, and Jan-Michael
+  Frahm.
+\newblock Pixelwise view selection for unstructured multi-view stereo.
+\newblock In {\em European Conference on Computer Vision (ECCV)}, 2016.
+
+\bibitem{sitzmann2019srn}
+Vincent Sitzmann, Michael Zollh{\"o}fer, and Gordon Wetzstein.
+\newblock Scene representation networks: Continuous 3d-structure-aware neural
+  scene representations.
+\newblock {\em Advances in Neural Information Processing Systems}, 32, 2019.
+
+\bibitem{sloan2002precomputed}
+Peter-Pike Sloan, Jan Kautz, and John Snyder.
+\newblock Precomputed radiance transfer for real-time rendering in dynamic,
+  low-frequency lighting environments.
+\newblock In {\em Proceedings of the 29th Annual Conference on Computer
+  Graphics and Interactive Techniques}, SIGGRAPH '02, page 527–536, New York,
+  NY, USA, 2002. Association for Computing Machinery.
+
+\bibitem{nerv2021}
+Pratul~P. Srinivasan, Boyang Deng, Xiuming Zhang, Matthew Tancik, Ben
+  Mildenhall, and Jonathan~T. Barron.
+\newblock Nerv: Neural reflectance and visibility fields for relighting and
+  view synthesis.
+\newblock In {\em CVPR}, 2021.
+
+\bibitem{srinivasan2021nerv}
+Pratul~P Srinivasan, Boyang Deng, Xiuming Zhang, Matthew Tancik, Ben
+  Mildenhall, and Jonathan~T Barron.
+\newblock Nerv: Neural reflectance and visibility fields for relighting and
+  view synthesis.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition}, pages 7495--7504, 2021.
+
+\bibitem{tancik2022blocknerf}
+Matthew Tancik, Vincent Casser, Xinchen Yan, Sabeek Pradhan, Ben Mildenhall,
+  Pratul Srinivasan, Jonathan~T. Barron, and Henrik Kretzschmar.
+\newblock {Block-NeRF}: Scalable large scene neural view synthesis.
+\newblock {\em arXiv}, 2022.
+
+\bibitem{tatarchenko2017octree}
+Maxim Tatarchenko, Alexey Dosovitskiy, and Thomas Brox.
+\newblock Octree generating networks: Efficient convolutional architectures for
+  high-resolution 3d outputs.
+\newblock In {\em Proceedings of the IEEE international conference on computer
+  vision}, pages 2088--2096, 2017.
+
+\bibitem{tretschk2021nonrigid}
+Edgar Tretschk, Ayush Tewari, Vladislav Golyanik, Michael Zollh\"{o}fer,
+  Christoph Lassner, and Christian Theobalt.
+\newblock Non-rigid neural radiance fields: Reconstruction and novel view
+  synthesis of a dynamic scene from monocular video.
+\newblock In {\em {IEEE} International Conference on Computer Vision ({ICCV})}.
+  {IEEE}, 2021.
+
+\bibitem{verbin2022refnerf}
+Dor Verbin, Peter Hedman, Ben Mildenhall, Todd Zickler, Jonathan~T. Barron, and
+  Pratul~P. Srinivasan.
+\newblock {Ref-NeRF}: Structured view-dependent appearance for neural radiance
+  fields.
+\newblock {\em CVPR}, 2022.
+
+\bibitem{wang2022fourier}
+Liao Wang, Jiakai Zhang, Xinhang Liu, Fuqiang Zhao, Yanshun Zhang, Yingliang
+  Zhang, Minye Wu, Jingyi Yu, and Lan Xu.
+\newblock Fourier plenoctrees for dynamic radiance field rendering in
+  real-time.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition}, pages 13524--13534, 2022.
+
+\bibitem{wang2003multiscale}
+Zhou Wang, Eero~P Simoncelli, and Alan~C Bovik.
+\newblock Multiscale structural similarity for image quality assessment.
+\newblock In {\em The Thrity-Seventh Asilomar Conference on Signals, Systems \&
+  Computers, 2003}, volume~2, pages 1398--1402. Ieee, 2003.
+
+\bibitem{wong2021rigidfusion}
+Yu-Shiang Wong, Changjian Li, Matthias Nie{\ss}ner, and Niloy~J. Mitra.
+\newblock {RigidFusion: RGB-D Scene Reconstruction with Rigidly-moving
+  Objects}.
+\newblock {\em Computer Graphics Forum}, 2021.
+
+\bibitem{yang2018foldingnet}
+Yaoqing Yang, Chen Feng, Yiru Shen, and Dong Tian.
+\newblock Foldingnet: Point cloud auto-encoder via deep grid deformation.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 206--215, 2018.
+
+\bibitem{yariv2020multiview}
+Lior Yariv, Yoni Kasten, Dror Moran, Meirav Galun, Matan Atzmon, Basri Ronen,
+  and Yaron Lipman.
+\newblock Multiview neural surface reconstruction by disentangling geometry and
+  appearance.
+\newblock {\em Advances in Neural Information Processing Systems},
+  33:2492--2502, 2020.
+
+\bibitem{yu2017bodyfusion}
+Tao Yu, Kaiwen Guo, Feng Xu, Yuan Dong, Zhaoqi Su, Jianhui Zhao, Jianguo Li,
+  Qionghai Dai, and Yebin Liu.
+\newblock Bodyfusion: Real-time capture of human motion and surface geometry
+  using a single depth camera.
+\newblock In {\em Proceedings of the IEEE International Conference on Computer
+  Vision}, pages 910--919, 2017.
+
+\bibitem{zhang2021ners}
+Jason Zhang, Gengshan Yang, Shubham Tulsiani, and Deva Ramanan.
+\newblock Ners: Neural reflectance surfaces for sparse-view 3d reconstruction
+  in the wild.
+\newblock {\em Advances in Neural Information Processing Systems},
+  34:29835--29847, 2021.
+
+\bibitem{zhang2018unreasonable}
+Richard Zhang, Phillip Isola, Alexei~A Efros, Eli Shechtman, and Oliver Wang.
+\newblock The unreasonable effectiveness of deep features as a perceptual
+  metric.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 586--595, 2018.
+
+\bibitem{zhang2021nerfactor}
+Xiuming Zhang, Pratul~P Srinivasan, Boyang Deng, Paul Debevec, William~T
+  Freeman, and Jonathan~T Barron.
+\newblock Nerfactor: Neural factorization of shape and reflectance under an
+  unknown illumination.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 40(6):1--18, 2021.
+
+\end{thebibliography}

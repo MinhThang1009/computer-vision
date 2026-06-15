@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{\textbf{Ablation studies on different coarse to fine training strategy stages.}}
+\label{tab:abalation_with_losses}
+\vspace{-2mm}
+\begin{tabular}{cccc|ccc}
+    \toprule
+    C2F &  $\mathcal{L}_{\text {normal}}$ & $\mathcal{L}_{\text {reg}}$& $\gamma^k$& PSNR↑ & SSIM↑ & LPIPS↓ \\
+    \midrule
+    &  \checkmark & \checkmark &\checkmark &23.16&0.8294  &0.2156  \\
+    \checkmark &  &  &&23.40  &0.8277  &0.2278  \\
+    \checkmark & \checkmark &  &&24.15  &0.8510  &0.1845  \\
+    \checkmark & \checkmark & \checkmark &&24.09  &0.8515  &0.1818  \\
+    \checkmark & \checkmark & \checkmark &\checkmark&\textbf{24.17}  &\textbf{0.8522}  &\textbf{0.1778}  \\
+    \bottomrule
+\end{tabular}
+\end{table}

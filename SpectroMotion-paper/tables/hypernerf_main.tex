@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{\textbf{Quantitative comparison on the HyperNeRF~\citep{park2021hypernerf} dataset.} We report the average PSNR, SSIM, and LPIPS (VGG) of several previous models. The \colorbox{red!25}{best}, the \colorbox{orange!25}{second best}, and \colorbox{yellow!25}{third best} results are denoted by red, orange, yellow.}
+\label{tab:hyper_main}
+\vspace{-2mm}
+\begin{tabular}{lccc}
+\toprule
+Method & PSNR ↑ & SSIM ↑ & LPIPS ↓ \\
+\midrule
+Deformable 3DGS~\citep{yang2023deformable} &{22.78} &{0.6201} &\colorbox{orange!25}{0.3380} \\
+4DGS~\citep{wu20234d} &\colorbox{red!25}{24.89} &\colorbox{red!25}{0.6781} &\colorbox{yellow!25}{0.3422}  \\
+GaussianShader~\citep{jiang2023gaussianshader} &18.55 &0.5452 &0.4795  \\
+GS-IR~\citep{liang2023gs} &19.87 &0.5729 &0.4498 \\
+NeRF-DS~\citep{yan2023nerf} &\colorbox{orange!25}{23.65} &\colorbox{orange!25}{0.6405} &0.3972\\
+HyperNeRF~\citep{park2021hypernerf}
+&\colorbox{yellow!25}{23.11} &\colorbox{yellow!25}{0.6387} &{0.3968}\\
+Ours &22.22 &0.6088 &\colorbox{red!25}{0.3295}\\
+\bottomrule
+\end{tabular}
+\end{table}
