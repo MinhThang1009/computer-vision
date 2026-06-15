@@ -183,6 +183,19 @@ tái lập (reproduce), tổng quát hóa dataset, vật liệu phản chiếu.
 \addcontentsline{toc}{chapter}{Mục lục}
 \endgroup
 \clearpage
+
+\begingroup
+\setlength{\parskip}{0pt}
+\renewcommand{\listfigurename}{Danh sách hình vẽ}
+\renewcommand{\listtablename}{Danh sách bảng}
+\addcontentsline{toc}{chapter}{Danh sách hình vẽ}
+\listoffigures
+\clearpage
+\addcontentsline{toc}{chapter}{Danh sách bảng}
+\listoftables
+\endgroup
+
+\clearpage
 \pagenumbering{arabic}
 
 \makeatletter
@@ -382,7 +395,7 @@ Toàn bộ pipeline được nhóm vẽ lại trong Hình~\ref{fig:pipeline}.
         \draw[arr] (splat) -- (img);
     \end{tikzpicture}%
     }
-    \caption{Pipeline 4D-GS (nhóm vẽ lại theo bài báo~\cite{wu20244dgs}). Tọa độ
+    \caption[Pipeline 4D-GS]{Pipeline 4D-GS (nhóm vẽ lại theo bài báo~\cite{wu20244dgs}). Tọa độ
     tâm Gaussian và thời điểm $t$ đi qua bộ mã hóa HexPlane và bộ giải mã đa đầu
     để sinh các lượng biến dạng; độ mờ $\alpha$ và màu $\mathcal{C}$ đi thẳng,
     không đổi theo thời gian.}
@@ -458,7 +471,7 @@ Hình~\ref{fig:coarse2fine} minh họa hiệu quả của khởi tạo coarse-to
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{coarse2fine}
-    \caption{Quá trình tối ưu coarse-to-fine: khởi tạo bằng Gaussian tĩnh giúp mô
+    \caption[Tối ưu hai giai đoạn coarse-to-fine]{Quá trình tối ưu coarse-to-fine: khởi tạo bằng Gaussian tĩnh giúp mô
     hình học tốt phần chuyển động. (Nguồn: bài báo gốc~\cite{wu20244dgs}.)}
     \label{fig:coarse2fine}
 \end{figure}
@@ -508,7 +521,7 @@ bài báo trên cùng bộ dữ liệu.
 \begin{table}[H]
 \centering
 \small
-\caption{Kết quả reproduce trên 8 cảnh D-NeRF (test set) so với số liệu bài báo.}
+\caption[Kết quả reproduce trên D-NeRF]{Kết quả reproduce trên 8 cảnh D-NeRF (test set) so với số liệu bài báo.}
 \label{tab:reproduce}
 \setlength{\tabcolsep}{5pt}
 \begin{tabular}{l|cc|cc|c}
@@ -567,7 +580,7 @@ cảnh ở hai đầu thang chất lượng: \textit{mutant} (cao nhất nhóm) 
         \includegraphics[width=\textwidth]{lego_gt}
         \par\small (d) Ground-truth: lego
     \end{minipage}
-    \caption{So sánh ảnh render của mô hình nhóm huấn luyện với ground-truth trên
+    \caption[Render so với ground-truth (mutant, lego)]{So sánh ảnh render của mô hình nhóm huấn luyện với ground-truth trên
     tập test. Cảnh \textit{mutant} (37,47 dB) gần như không phân biệt được bằng mắt;
     cảnh \textit{lego} (25,04 dB), cảnh khó nhất của D-NeRF, vẫn còn sai khác
     nhỏ ở vùng chi tiết.}
@@ -589,7 +602,7 @@ của bài báo cảnh báo.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{convergence_dnerf}
-    \caption{Tiến trình PSNR test của 8 cảnh D-NeRF theo vòng lặp giai đoạn fine
+    \caption[Hội tụ PSNR test trên D-NeRF]{Tiến trình PSNR test của 8 cảnh D-NeRF theo vòng lặp giai đoạn fine
     (eval tại 3.000/7.000/14.000). Số liệu lấy từ log huấn luyện (tensorboard, trên
     tập test lấy mẫu) nên dùng để đọc xu hướng hội tụ; giá trị tuyệt đối có thể lệch
     nhẹ so với số \texttt{metrics.py} ở bảng per-scene. Mỗi đường hội tụ về mức PSNR
@@ -605,7 +618,7 @@ tiết của cảnh khó như \textit{lego}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{montage_dnerf}
-    \caption{D-NeRF: render (hàng trên) so với ground-truth (hàng dưới) trên cả 8 cảnh test.}
+    \caption[Montage render/ground-truth D-NeRF]{D-NeRF: render (hàng trên) so với ground-truth (hàng dưới) trên cả 8 cảnh test.}
     \label{fig:montage_dnerf}
 \end{figure}
 
@@ -624,7 +637,7 @@ báo chỉ công bố con số \textit{trung bình} trên tập vrig nên Bảng
 \begin{table}[H]
 \centering
 \small
-\caption{Reproduce trên 4 cảnh vrig HyperNeRF (test set, 14.000 vòng) so với số
+\caption[Kết quả reproduce trên HyperNeRF]{Reproduce trên 4 cảnh vrig HyperNeRF (test set, 14.000 vòng) so với số
 trung bình công bố trong bài báo~\cite{wu20244dgs} (Bảng vrig: PSNR 25,2 / MS-SSIM 0,845).}
 \label{tab:hypernerf}
 \setlength{\tabcolsep}{6pt}
@@ -657,7 +670,7 @@ cảnh khó \textit{broom2}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{montage_hypernerf}
-    \caption{HyperNeRF: render (hàng trên) so với ground-truth (hàng dưới) trên 4 cảnh vrig.}
+    \caption[Montage render/ground-truth HyperNeRF]{HyperNeRF: render (hàng trên) so với ground-truth (hàng dưới) trên 4 cảnh vrig.}
     \label{fig:montage_hypernerf}
 \end{figure}
 
@@ -671,7 +684,7 @@ nhất bộ, chỉ số cấu trúc thấp) chứ không phải số vòng lặp
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{convergence_hypernerf}
-    \caption{Tiến trình PSNR test của 4 cảnh HyperNeRF theo vòng lặp giai đoạn fine
+    \caption[Hội tụ PSNR test trên HyperNeRF]{Tiến trình PSNR test của 4 cảnh HyperNeRF theo vòng lặp giai đoạn fine
     (eval tại 3.000/7.000/14.000). Số liệu từ log huấn luyện (tensorboard, tập test
     lấy mẫu), dùng đọc xu hướng; có thể lệch nhẹ so với số \texttt{metrics.py} ở bảng per-scene.}
     \label{fig:conv_hypernerf}
@@ -685,7 +698,7 @@ kết quả reproduce của nhóm.
 \begin{table}[H]
 \centering
 \small
-\caption{So sánh các phương pháp trên bộ D-NeRF ($800\times800$), số liệu trích từ
+\caption[So sánh các phương pháp trên D-NeRF]{So sánh các phương pháp trên bộ D-NeRF ($800\times800$), số liệu trích từ
 bài báo~\cite{wu20244dgs}. ``Time'' là thời gian huấn luyện. Ô \colorbox{red!25}{hồng}
 = tốt nhất, \colorbox{yellow!25}{vàng} = nhì (xét trong các phương pháp công bố; dòng
 4D-GS của nhóm là tái lập, không tính xếp hạng).}
@@ -772,7 +785,7 @@ phân giải gốc, bảo đảm so sánh công bằng với số liệu bên th
 \begin{table}[H]
 \centering
 \small
-\caption{4D-GS trên 7 cảnh NeRF-DS (test set, $480\times270$, 14.000 vòng): số nhóm
+\caption[Kết quả 4D-GS trên NeRF-DS]{4D-GS trên 7 cảnh NeRF-DS (test set, $480\times270$, 14.000 vòng): số nhóm
 tự đo bằng công cụ đánh giá chính thức, đặt cạnh số 4D-GS trong bảng baseline của
 SpectroMotion~\cite{spectromotion} (CVPR 2025), vì bài báo 4D-GS gốc không đánh
 giá NeRF-DS. LPIPS đều là biến thể VGG. Số PSNR in đậm là cảnh nhóm vượt SpectroMotion.}
@@ -848,7 +861,7 @@ gốc và sẽ được bàn tiếp ở chương~\ref{chap:critical}.
         \includegraphics[width=\textwidth]{plate_gt}
         \par\small (d) Ground-truth: plate
     \end{minipage}
-    \caption{Kết quả trên NeRF-DS. Cảnh \textit{sieve} (25,72 dB) giữ được hình
+    \caption[Render so với ground-truth (sieve, plate)]{Kết quả trên NeRF-DS. Cảnh \textit{sieve} (25,72 dB) giữ được hình
     học tốt; cảnh \textit{plate} (17,81 dB) mất chi tiết phản xạ trên mặt đĩa,
     minh chứng cho hạn chế với vật liệu phản chiếu.}
     \label{fig:nerfds}
@@ -861,7 +874,7 @@ phản chiếu như \textit{plate}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{montage_nerfds}
-    \caption{NeRF-DS: render (hàng trên) so với ground-truth (hàng dưới) trên cả 7 cảnh test.}
+    \caption[Montage render/ground-truth NeRF-DS]{NeRF-DS: render (hàng trên) so với ground-truth (hàng dưới) trên cả 7 cảnh test.}
     \label{fig:montage_nerfds}
 \end{figure}
 
@@ -872,7 +885,7 @@ mức thấp nhất).
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{convergence_nerfds}
-    \caption{Tiến trình PSNR test của 7 cảnh NeRF-DS theo vòng lặp giai đoạn fine
+    \caption[Hội tụ PSNR test trên NeRF-DS]{Tiến trình PSNR test của 7 cảnh NeRF-DS theo vòng lặp giai đoạn fine
     (eval tại 3.000/7.000/14.000). Số liệu từ log huấn luyện (tensorboard, tập test
     lấy mẫu), dùng đọc xu hướng; có thể lệch nhẹ so với số \texttt{metrics.py} ở bảng per-scene.}
     \label{fig:conv_nerfds}
@@ -889,7 +902,7 @@ nền tin cậy cho phần đối sánh chéo ngay sau đây.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{bar_repro_vs_paper}
-    \caption{Trục 1: đối sánh kết quả nhóm với số công bố trên từng dataset
+    \caption[Trục 1: đối sánh nhóm với số công bố]{Trục 1: đối sánh kết quả nhóm với số công bố trên từng dataset
     (D-NeRF: PSNR/SSIM/LPIPS; HyperNeRF: PSNR/MS-SSIM; NeRF-DS: PSNR/SSIM/LPIPS-vgg
     so SpectroMotion~\cite{spectromotion}). Cột ``Nhóm'' sát cột ``Bài báo'' xác nhận
     tái lập đúng.}
@@ -909,7 +922,7 @@ mà bảng đối sánh với bài báo không trả lời: \textit{4D-GS mạnh
 \begin{table}[H]
 \centering
 \small
-\caption{4D-GS (mô hình nhóm huấn luyện) trên ba dataset, trung bình mỗi bộ. Cột
+\caption[4D-GS trên ba dataset (đối sánh chéo)]{4D-GS (mô hình nhóm huấn luyện) trên ba dataset, trung bình mỗi bộ. Cột
 chất lượng dùng chung PSNR/SSIM/LPIPS-vgg; cột hiệu năng FPS/dung lượng/số Gaussian
 là đặc tính phương pháp (so trực tiếp được, không phụ thuộc cảnh).}
 \label{tab:cross}
@@ -929,7 +942,7 @@ NeRF-DS   & thật, phản chiếu & 22,76 & 0,8220 & 0,2188 & 81,7 & 45,4 & $\s
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{bar_cross_dataset}
-    \caption{So sánh 4D-GS trên ba dataset (PSNR/SSIM/LPIPS). \textbf{PSNR} giảm dần
+    \caption[Biểu đồ PSNR/SSIM/LPIPS ba dataset]{So sánh 4D-GS trên ba dataset (PSNR/SSIM/LPIPS). \textbf{PSNR} giảm dần
     theo trục tổng hợp (D-NeRF) $\to$ thật (HyperNeRF) $\to$ thật phản chiếu (NeRF-DS);
     riêng SSIM/LPIPS không đơn điệu do khác độ phân giải và cảnh (xem phần ``Đọc kết quả'').}
     \label{fig:cross}
@@ -964,7 +977,7 @@ giải vì sao cảnh quy mô lớn (nhiều Gaussian) sẽ phá vỡ ngưỡng 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{scatter_fps_gaussians}
-    \caption{Quan hệ tốc độ render (FPS) và số Gaussian mỗi cảnh; mỗi điểm là một
+    \caption[FPS theo số Gaussian mỗi cảnh]{Quan hệ tốc độ render (FPS) và số Gaussian mỗi cảnh; mỗi điểm là một
     cảnh (cùng kiểu phân tích với hình point-FPS của bài báo gốc). FPS giảm khi số
     Gaussian tăng.}
     \label{fig:scatter}
